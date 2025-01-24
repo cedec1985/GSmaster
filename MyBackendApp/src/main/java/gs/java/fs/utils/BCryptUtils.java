@@ -1,4 +1,4 @@
-package gs.java.fs.utils;
+package java.gs.java.fs.utils;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
