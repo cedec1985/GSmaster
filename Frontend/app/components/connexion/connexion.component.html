@@ -1,0 +1,34 @@
+<div align-items="center" class="container" style="margin-left: 700px">
+  <img
+    src="assets\gardenstorelogo.png"
+    width="65%"
+    style="border-radius: 5px; border: solid 2.5px rgb(0, 253, 0)"/>
+  <div>
+    <p style="margin: 4px"justify-content-center >Connexion</p>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="Email"
+            class="valid-input"/>
+        </div>
+        <div>
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            placeholder="password"
+            class="valid-input"/>
+        </div>
+        <button type="submit" >
+          Se connecter
+        </button>
+      </form>
+      </div>
+  </div>
+<br /><br />
+<footer align-items="center"></footer>
+
+

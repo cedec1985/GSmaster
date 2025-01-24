@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
+<div id="principale">
+    <div id="enTete">
+      <div id="BarreWidgets">
+        <div class="WidgetTete" id="vuePanier">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <span>
+            <span *ngIf="panier == 0">
+              0
+            </span>
+            <span *ngIf="panier != 0">
+              {{panier}}
+            </span>
+            <span *ngIf="panier >= 1">
+              articles
+            </span>
+            <span *ngIf="panier == 0">
+              article
+            </span>
+          </span>
+          <a routerLink="/cart" *ngIf="panier != 0">
+            Panier
+          </a>
+          <a routerLink="achatterminer" *ngIf="panier != 0">
+            Terminer les achats
+          </a>
+        </div>
+        <div class="WidgetTete" id="terminer">
+        </div>
+      </div>
+      <div id="logo">
+        <a routerLink="">
+          <img [src]="logo" id="logo" alt="Home">
+        </a>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+  <!-- <app-hero-form></app-hero-form>  -->
+    
+    <div id="pied">
+      <br><br>
+      <hr id="dividerPied">
+      <p id="textePied" class="tresPetitTexte">&copy;&nbsp;2024 gardenstore</p>
+    </div>
+  
+  
+
+
+
+  
+
+
+

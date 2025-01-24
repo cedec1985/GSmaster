@@ -1,0 +1,55 @@
+<div id="colonneUnique">
+    <p id="TexteConfirmation">
+        <strong>Votre commande a été traitée avec succès et sera livrée dans les 24 heures.</strong>
+        <br><br>
+        Merci de noter votre no de confirmation :  
+        <strong>{{numCommande}}</strong>
+        <br>
+       .<a routerLink="/profiluser/contact"> Contactez GardenStore en cas de difficultés</a>
+        <br><br>
+        Merci de votre visite!
+    </p>
+    <div class="colonneResume">
+        <table id="tableResumeCommande" class="TableDetails">
+            <tr class="enTete">
+                <th colspan="3">Résumé de votre commande</th>
+            </tr>
+            <tr class="teteTable">
+                <td>Produit</td>
+                <td>Quantité</td>
+                <td>Prix</td>
+                <td>Livraison</td>
+                <td>Destinataire</td>
+            </tr>
+            <tr *ngFor="let prod of cartItems; let index=index">
+                <td class="align-middle">{{prod.name}}</td>
+                <td class="align-middle">{{prod.quantity}}</td>
+                <td class="align-middle">{{ prod.price | currency }}</td>
+
+                <td class="align-middle"><div *ngIf="livreur$ | async as livreur">
+                    {{livreur.nom}} | {{livreur.societe}}
+                    
+                </div></td>
+                <td class="align-middle"><div *ngIf="client$ | async as client">
+                    {{client.nom}} domicilié {{client.addresse.addresseRue}} à {{client.addresse.addresseVille}} , {{client.addresse.addresseNumero}} , {{client.addresse.addresseCodepostal}}
+                </div></td>
+            </tr>
+            <tr><td colspan="3" style="padding: 0 20px"><hr></td></tr>
+            <tr>
+                <td colspan="2" id="fraisGauche"><strong>Frais :</strong></td>
+                <td id="fraisDroite">
+                    {{ frais | currency }}</td>
+            </tr>
+            <tr>
+                <td colspan="2" id="totalCellLeft"><strong>Total :</strong></td>
+                <td id="totalDroite">
+                    {{ total | currency }}</td>
+            </tr>
+            <tr><td colspan="3" style="padding: 0 20px"><hr></td></tr>
+            <tr>
+                <td colspan="3" id="dateTraitement"><strong>Date de traitement :{{curDate | date:'dd/MM/yyyy'}}</strong>
+                  </td>
+            </tr>
+        </table>
+    </div>
+        

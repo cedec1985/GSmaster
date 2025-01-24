@@ -1,0 +1,9 @@
+<h2>Détails de l'article:</h2>
+<div *ngIf="article$ | async as article">
+    <p><span>NOM:</span>  {{article.nom}}</p>
+    <p><span>PRIX:</span>{{article.prixDeVente}}</p>
+    <p><span>REF:</span>{{article.reference}}</p>
+    <p><span>AVIS:</span>{{article.avis}}</p>
+    <p><span>STOCK:</span>{{article.stock}}</p>
+    <p><span>CATEGORIE:</span>{{article.categorie}}</p>
+</div>

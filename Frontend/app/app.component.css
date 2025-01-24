@@ -1,0 +1,92 @@
+
+body {
+  line-height: 1;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+#menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#menu a:hover {
+  background-color: #ddd;
+}
+#panier{
+  margin-left: 1550px;
+}
+ul a.dropdown-item {
+  display:flex;
+  min-width: 180px;             /* Largeur minimale des liens */
+
+  margin: 0.5rem;               /* Marges externes (1 valeur = 4 directions) */
+  padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+  text-align: center;           /* Centrage du texte */
+  background-color: #1ABC9C;    /* Arrière-plan */
+  color: #fff;                  /* Couleur du texte */
+  text-decoration: none;        /* Suppression du soulignement */
+  border: 1px solid #fff;       /* Ajout d'une bordure */
+  border-radius: 4px;           /* Arrondis des bordures */
+  transition: all 1s ;          /* Ajout des effets de transition */
+}
+img {
+  width : 5cm ;
+  height: 3.5cm;
+}
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+a {
+  text-decoration: none;
+   color: rgb(15, 173, 28);
+}
+
+a:hover,
+a:active {
+ color: white;
+}
+
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  height: 30px;
+  margin: 0 auto;
+  padding-right: 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 15%;
+}
+
+.label {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0;
+  width: 85%;
+}
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

@@ -1,0 +1,42 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand justify-content-center"><img src="{{logo}}" alt="logo" style="border-color:darkolivegreen"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="margin-left:400px;" class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="category">
+                Catégories
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Espace membre
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item"  routerLink="profiluser/profiluser-display">Votre profil</a>
+                <a class="dropdown-item"  routerLink="profiluser/contact">Nous contacter</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Connection
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                <a class="dropdown-item" routerLink="connexion">Se connecter</a>
+                <a class="dropdown-item" routerLink="form">S'inscrire</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown" id="panier">
+              <a style="margin-left:900px" class="nav-link dropdown-toggle"  href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/cart">
+                Panier
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>

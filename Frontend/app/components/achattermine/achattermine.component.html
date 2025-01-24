@@ -1,0 +1,94 @@
+
+<div class="row">
+    <div class="col-md-6">
+</div>
+</div>
+<div class="row">
+    <div class="col-lg-10">
+        <p style="margin-left:320px">Pour acheter les articles de votre panier merci de fournir les informations ci-dessous :</p>
+    </div>
+</div>
+<div class="row m-3 results">
+<div class="card-biofood col-md-6 ml-3 mr-3">
+    <div class="card-body">
+        <form [formGroup]="registerForm" #Form ="ngForm">
+            <div class="form-group">
+                <label class="float-left">Prenom</label>
+                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': ['submitted && f.firstName.errors'] }" />
+                <div *ngIf="['submitted && f.firstName.errors']" class="invalid-feedback">
+                <div *ngIf="['f.firstName.errors.required']" [hidden] ="['f.firstName.required']">Le prenom est est obligatoire</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="float-left">Nom</label>
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': ['submitted && f.lastName.errors'] }" />
+                <div *ngIf="['submitted && f.lastName.errors']" class="invalid-feedback">
+                    <div *ngIf="['f.lastName.errors.required']" [hidden] ="['f.lastName.required']">Le nom est est obligatoire</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="float-left">Email</label>
+                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': ['submitted && f.email.errors'] }" />
+                <div *ngIf="['submitted && f.email.errors']" class="invalid-feedback">
+                    <div *ngIf="['f.email.errors.required']" [hidden] ="['f.email.required']">Email obligatoire</div>
+                    <div *ngIf="['f.email.errors.email']" [hidden] ="['f.email.required']">Veuillez saisir un email valide</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="float-left">Téléphone</label>
+                <input type="text" formControlName="tel" class="form-control" [ngClass]="{ 'is-invalid':['submitted && f.tel.errors'] }" />
+                <div *ngIf="['submitted && f.tel.errors']" class="invalid-feedback">
+                    <div *ngIf="['f.tel.errors.required']" [hidden] ="['f.tel.required']">Le téléphone est est obligatoire</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="float-left">Adresse</label>
+                <input type="text" formControlName="adr" class="form-control" [ngClass]="{ 'is-invalid': ['submitted && f.adr.errors'] }" />
+                <div *ngIf="['submitted && f.adr.errors']" class="invalid-feedback">
+                    <div *ngIf="['f.adr.errors.required']"[hidden] ="['f.adr.required']" >L'adresse est est obligatoire</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="float-left">Carte de crédit</label>
+                <input type="text" formControlName="cb" class="form-control" [ngClass]="{ 'is-invalid': ['submitted && f.cb.errors'] }" />
+                <div *ngIf="['submitted && f.cb.errors']" class="invalid-feedback">
+                    <div *ngIf="['f.cb.errors.required']" [hidden] ="['f.cb.required']">Saisissez votre numéro de carte bancaire</div>
+                </div>
+            </div>  
+
+     
+                
+            <div class="text-center">
+                <button class="btn btn-primary mr-1"  (ngSubmit)="onSubmit()" routerLink="/confirmation">confirmer</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Annuler</button>
+            </div>
+        </form>
+    </div>
+<div class="card-biofood mr-1 col-md-8" style ="margin-top:550px">
+    <div class="card-body">
+        <div style="margin-left:350px">
+            <ul>
+                <li class="float-left">Livraison le lendemain garantie.</li>
+                <li class="float-left">Des frais de {{ frais | currency:"€" }} sont appliqués à toutes les commandes</li>
+            </ul>
+        </div>
+        <table id="BoitePrix" class="float-right mt-5 mr-5">
+            <tr>
+                <td>Sous total :</td>
+                <td class="colonneEnregistrementPrix">
+                    {{ soustotal | currency:"€"}}</td>
+            </tr>
+            <tr>
+                <td>Frais :</td>
+                <td class="colonneEnregistrementPrix">
+                    {{ frais | currency :"€"}}</td>
+            </tr>
+            <tr>
+                <td class="total">Total :</td>
+                <td class="total colonneEnregistrementPrix">
+                    {{ total | currency:"€" }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>

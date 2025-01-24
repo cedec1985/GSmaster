@@ -1,0 +1,15 @@
+button {
+    background: rgb(0, 0, 0);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    inline-size: 125px;
+    block-size: 35px;
+    border-radius: 3px;
+    border:solid 2.5px red;
+}
+
+h2 {
+    color:black;
+    padding:125px;
+}

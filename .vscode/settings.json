@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "MyBackendApp"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}

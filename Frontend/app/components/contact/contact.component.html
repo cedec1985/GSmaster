@@ -1,0 +1,33 @@
+
+<div class="container">
+  <div [hidden]="submitted">
+</div>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <h1>Formulaire de contact</h1>
+  <div>
+    <label for="name">Nom</label>
+    <input type="text" formControlName="name" id="name">
+    <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']" class="error">Le nom est requis.</div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" id="email">
+    <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']" class="error">L'email est requis.</div>
+    <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']" class="error">L'email doit être valide.</div>
+  </div>
+
+  <div>
+    <label for="subject">Sujet</label>
+    <input type="text" formControlName="subject" id="subject">
+    <div *ngIf="contactForm.get('subject')?.touched && contactForm.get('subject')?.errors?.['required']" class="error">Le sujet est requis.</div>
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea formControlName="message" id="message"></textarea>
+    <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']" class="error">Le message est requis.</div>
+  </div>
+
+  <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+</form>

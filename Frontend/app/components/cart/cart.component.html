@@ -1,0 +1,61 @@
+<h4 *ngIf="cartItems.length === 0" class="cartheader ml-4"  >Votre panier est vide.</h4>
+ <h4 *ngIf="cartItems.length >=1" class="cartheader ml-4"  >Votre panier contient {{cartItems.length}} articles.</h4>
+<h4 *ngIf="cartItems.length >=1" class="cartheader ml-4"  >Votre panier contient {{prods}} articles.</h4>
+<div *ngIf="cartItems.length !== 0" class="cart-overlay">
+  <h2 class="cartHeading">Votre panier</h2>
+  <div class="cart" style="display: flex;">
+  
+  <table class="table">
+    <div class="cart-content">
+      <div class="cart-item" *ngFor="let item of cartItems">
+      <div class="container mt-5">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Nom</th>
+              <th>Prix</th>
+              <th>Quantité</th>
+              <th>Avis</th>
+              <th>Modifications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img  src="{{item.url}}" class="product-img" alt="item"></td>
+              <td class="discPrice ml-5">{{item.name}}</td>
+              <td class="discPrice ml-5">{{item.price | currency:'EUR':'symbol':undefined:'fr'}}</td>
+              <td class="discPrice ml-5"> {{item.quantity}}
+                <div *ngIf="item.quantity<=5; then enStock; else stockEpuise">                <!--directive structurelle : affiche un message : en stock ou stock épuisé -->
+                </div>
+              <ng-template #enStock>
+                <div style="color :blue">
+                en stock
+                </div>
+              </ng-template>
+              <ng-template #stockEpuise>
+                <div style="color:red">
+               Stock epuisé
+                </div>
+              </ng-template>
+               </td>  
+              <td class="discPrice ml-5">{{item.avis}}</td>
+              <td>
+              <div class="counter mx-auto my-auto">
+          <i class="fas fa-plus-circle" (click)="handleIncrement(item)"></i> 
+          <i class="fa fa-plus mt-4" aria-hidden="true" (click)="handleIncrement(item)"></i>
+          <p class="item-amount mt-4">{{item.quantity}}</p>
+          <i class="fas fa-minus-circle" (click)="handleDecriment(item)"></i>
+          <i class="fa fa-minus mt-4" aria-hidden="true" (click)="handleDecriment(item)"></i>
+          <span class="remove-item" class="makebold" style="cursor:pointer" (click)="handleRemoveItem(item)" >Retirer</span>
+             </div>
+             </td>
+          </tr>
+        </tbody>
+      </div>
+      </div>
+    </div>
+  </table>
+  </div>
+</div>
+
+

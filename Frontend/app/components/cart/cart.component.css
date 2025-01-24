@@ -1,0 +1,15 @@
+.input-group-append {
+    cursor: pointer;
+  }
+.cart-content{
+  margin-left: 300px;
+}
+@media screen and (min-width: 768px) {           
+  .cart {
+    width: 100%;
+    min-width: 450px;
+  }
+}
+.cart {
+  line-height: 2.0rem;
+}

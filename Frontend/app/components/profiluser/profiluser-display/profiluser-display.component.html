@@ -1,0 +1,15 @@
+<p>data works!</p>
+<h2>Donnés utilisateur :</h2>
+<div *ngIf="client$ | async as client">
+  <p>{{ client.id }}</p>
+  <p>{{ client.nom }}</p>
+  <p>{{ client.prenom }}</p>
+  <p>{{ client.mail }}</p>
+  <p>{{ client.telephone }}</p>
+  <p>{{ client.addresse.addresseRue}}</p>
+  <p>{{ client.addresse.addresseVille}}</p>
+  <p>{{ client.addresse.addresseNumero}}</p>
+  <p>{{ client.addresse.addresseCodepostal}}</p>
+</div>
+
+

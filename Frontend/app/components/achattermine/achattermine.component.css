@@ -1,0 +1,23 @@
+.results {
+    display: flex;
+    flex: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.card-biofood {
+ position: relative;
+    flex-direction: column;
+    min-width: 50;
+    word-wrap: break-word;
+    background-clip: border-box;
+
+}
+.card-biofood.mr-1.col-md-8 {
+    position: relative;
+       flex-direction: column;
+       min-width: 50;
+       word-wrap: break-word;
+       background-clip: border-box;
+        margin-top: 750px;
+   }

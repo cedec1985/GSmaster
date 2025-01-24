@@ -1,0 +1,76 @@
+/* Sélectionner le body et lui donner une couleur de fond blanche */
+body {
+    background-color: white;
+  }
+  
+  h3 {
+    margin: 10px;
+  }
+  
+  .container {
+    padding: 10px;
+    margin: 11px;
+    inline-size: 420px;
+    block-size: 450px;
+    border: solid 2.5px yellowgreen;
+    border-radius: 3px;
+  }
+  
+  /* Sélectionner les éléments de classe form-group et leur donner une marge de 10px */
+  .form-group {
+    margin: 10px;
+  }
+  
+  /* Sélectionner les éléments de type label et leur donner une couleur de texte bleue */
+  label {
+    margin: 3px;
+    color: blue;
+    inline-size: 20px;
+    block-size: 10px;
+  }
+  
+  select {
+    margin: 2px;
+    inline-size: 360px;
+    block-size: 40px;
+    border-radius: 5px;
+    border: 2.5px solid rgb(105, 102, 102);
+  }
+  
+  /* Sélectionner les éléments de type input et leur donner une bordure grise de 1px */
+  input {
+    inline-size: 350px;
+    size-adjust: center;
+    text-align: start;
+    block-size: 35px;
+    border: 1px solid gray;
+    background-color: rgb(234, 239, 243);
+    border-radius: 3px;
+  }
+  
+  /* Style pour les champs valides */
+  .valid-input {
+    border-color: green;
+  }
+  
+  /* Style pour les champs invalides */
+  .invalid-input {
+    border-color: red;
+  }
+  
+  /*taille du logo avatar dans la div*/
+  .fadeIn.first {
+    inline-size: 75%;
+  }
+  
+  /* Sélectionner les éléments de type button et leur donner une couleur de fond bleue, une couleur de texte blanche et une bordure sans style */
+  button {
+    background-color: blue;
+    color: white;
+    border: none;
+    inline-size: 95px;
+    block-size: 55px;
+    border-radius: 3px;
+    margin: 74px;
+  }
+  

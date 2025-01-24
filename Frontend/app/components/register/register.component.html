@@ -1,0 +1,164 @@
+<div class="container2" id="tout2">
+  <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+    <img align-items="center" justify-content ="center" src="assets\formulaire-inscription.png" width="35%" />
+    <br />
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Email"
+      name="email"
+      class="form-control"
+      autocomplete="on"
+      minlength="8"
+      maxlength="35"
+      required="true"
+    />
+    <div align-items="center" justify-content ="center" *ngIf="email" required >
+      * email requis !
+    </div>
+    <br />
+    <input
+      type="text"
+      formControlName="nom"
+      placeholder="nom"
+      name="nom"
+      class="form-control"
+      autocomplete="on"
+      minlength="5"
+      maxlength="25"
+      required="true"
+    />
+    <div align-items="center" *ngIf="nom" required>
+      * le champ est requis !
+    </div>
+    <br />
+    <input
+      type="text"
+      formControlName="prenom"
+      placeholder="prenom"
+      name="prenom"
+      class="form-control"
+      autocomplete="on"
+      minlength="5"
+      maxlength="25"
+      required="true"
+    />
+    <div align-items="center" *ngIf="prenom" required >
+      * le champ est requis!
+    </div>
+    <br />
+    <input
+    type="text"
+    formControlName="ville"
+    placeholder="ville"
+    name="ville"
+    class="form-control"
+    autocomplete="on"
+    required="true"
+  />
+  <div align-items="center" *ngIf="ville" required>
+      * le champ est requis !
+    </div>
+    <br />
+    <input
+    type="text"
+    formControlName="rue"
+    placeholder="rue"
+    name="rue"
+    class="form-control"
+    autocomplete="on"
+    required="true"
+  />
+  <div align-items="center" *ngIf="rue" required >
+      * le champ est requis !
+    </div>
+    <br />
+    <input
+    type="text"
+    formControlName="codePostal"
+    placeholder="codePostal"
+    name="codePostal"
+    class="form-control"
+    autocomplete="on"
+    required="true"
+  />
+  <div align-items="center"  *ngIf="codePostal" required >
+      * le champ est requis !
+    </div>
+    <br />
+    <input
+    type="text"
+    formControlName="telephone"
+    placeholder="telephone"
+    name="telephone"
+    class="form-control"
+    autocomplete="on"
+    minlength="9"
+    required="true"
+  />
+  <div align-items="center"  *ngIf="telephone" required >
+      * le champ est requis !
+    </div>
+    <br />
+    <input
+    type="text"
+    formControlName="numero"
+    placeholder="numero"
+    name="numero"
+    class="form-control"
+    autocomplete="on"
+    required="true"
+  />
+  <div align-items="center"  *ngIf="numero" required >
+      * le champ est requis !
+    </div>
+    <br />
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="password"
+      name="password"
+      class="form-control"
+      autocomplete="on"
+      minlength="8"
+      maxlength="12"
+      required="true"
+    />
+    <div align-items="center"  *ngIf="password" required >
+        * mot de passe requis !
+      </div>
+      <br />
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      placeholder="Confirm Password"
+      name="confirmPassword"
+      class="form-control"
+      autocomplete="off"
+      minlength="8"
+      maxlength="12"
+      required="true"
+    />
+    <div align-items="center" *ngIf="confirmPassword" required >
+        *confirmation du mot de passe requise !
+      </div>
+    <br />
+    <button
+      style="
+        text-align: center;
+        border: 2px solid #757474;
+        background-color: rgb(97, 193, 223);
+        color: #ffffff;
+        padding: 11px 28px;
+        font-size: 20px;
+        margin: 5px;
+        inline-size: 690px;
+        border-radius: 5px;
+      "
+      type="submit"
+      class="button"
+      value="S'inscrire"> S'inscrire
+    </button>
+  </form>
+
+

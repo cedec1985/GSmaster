@@ -1,0 +1,51 @@
+/* Style de base pour les images */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .img-container img {
+    width: 20%;
+    height: 60%;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Effet de survol */
+  .img-container:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay semi-transparent */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 167, 100, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Effet d'apparition de l'overlay */
+  .img-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Texte sur l'overlay */
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Effet de survol pour le texte */
+  .img-container:hover .text {
+    font-size: 28px;
+  }
+  
