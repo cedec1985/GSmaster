@@ -194,9 +194,8 @@
                 </goals>
                 <configuration>
                 <sources>
-                <source>src\target
+                <source>..\target
                 </source>
-                ...
                 </sources>
                 </configuration>
                 </execution>
