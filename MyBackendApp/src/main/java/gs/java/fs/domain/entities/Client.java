@@ -3,7 +3,6 @@ package java.gs.java.fs.domain.entities;
 import java.gs.java.fs.api.validation.constraints.Password;
 import java.gs.java.fs.api.validation.constraints.Username;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;

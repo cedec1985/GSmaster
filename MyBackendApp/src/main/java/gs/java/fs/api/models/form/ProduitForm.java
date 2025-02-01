@@ -1,8 +1,6 @@
 package java.gs.java.fs.api.models.form;
 
-import java.gs.java.fs.domain.entities.Description;
 import java.gs.java.fs.domain.entities.Produit;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
