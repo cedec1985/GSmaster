@@ -1,11 +1,10 @@
 
- import { CommonModule, CurrencyPipe } from '@angular/common';
+ import { CommonModule } from '@angular/common';
 import { Component, OnInit} from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CategoriesmockService } from '../../../services/categoriesmock.service';
 import { ProduitresultComponent } from "../../produitresult/produitresult.component";
-import { CartComponent } from '../../cart/cart.component';
 
     
     @Component({
@@ -13,7 +12,7 @@ import { CartComponent } from '../../cart/cart.component';
     standalone: true,
     templateUrl: './accessoires.component.html',
     styleUrl: './accessoires.component.scss',
-    imports: [CommonModule, RouterModule, ReactiveFormsModule, CurrencyPipe, ProduitresultComponent,CartComponent]
+    imports: [CommonModule, RouterModule, ReactiveFormsModule, ProduitresultComponent]
 })
     export class AccessoiresComponent implements OnInit { 
     

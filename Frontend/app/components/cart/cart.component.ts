@@ -1,19 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { StockEpuiseDirective } from '../../directives/stockEpuise.directive';
 import { PanierService } from '../../services/panier.service';
-import { AccessoiresComponent } from "../product/accessoires/accessoires.component";
-import { MobilierComponent } from "../product/mobilier/mobilier.component";
-import { OutillageComponent } from "../product/outillage/outillage.component";
-import { PlantesComponent } from "../product/plantes/plantes.component";
 
 @Component({
     selector: 'app-cart',
     templateUrl: './cart.component.html',
     styleUrl: './cart.component.css',
     standalone: true,
-    imports:[ CommonModule, OutillageComponent, MobilierComponent, PlantesComponent, AccessoiresComponent,FormsModule,ReactiveFormsModule,StockEpuiseDirective]
+    imports:[CommonModule, FormsModule, ReactiveFormsModule]
 })
 export class CartComponent implements OnInit{
 

@@ -48,8 +48,7 @@ export class CategoryComponent {
     
       // this.service.getCategorie(id).subscribe(data=>{
       //    this.categorie = data;
- 
-      //    let nomCategorie : string = this.categorie.nom;
+
        
     switch (nomCategorie) {
       case 'OUTILLAGE':

@@ -3,7 +3,6 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { PanierService } from '../../services/panier.service';
 import { CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule, Form } from '@angular/forms';
-import { AchattermineComponent } from '../achattermine/achattermine.component';
 import { Observable } from 'rxjs';
 import { Livreur } from '../../models/livreur';
 import { LivreurService } from '../../services/livreur.service';
@@ -16,7 +15,7 @@ import { CommandeAPIForm,  CommandeForm } from '../../models/dto/commande.dto';
   selector: 'app-confirmation',
   templateUrl: './confirmation.component.html',
   styleUrls: ['./confirmation.component.css'],
-  imports: [CommonModule,ReactiveFormsModule,FormsModule,RouterModule,AchattermineComponent],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
   standalone: true
 })
 export class ConfirmationComponent implements OnInit {

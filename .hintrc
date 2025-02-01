@@ -3,6 +3,17 @@
     "development"
   ],
   "hints": {
+    "axe/text-alternatives": "off",
+    "no-inline-styles": "off",
+    "axe/forms": "off",
+    "button-type": "off"
+  }
+}
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
     "typescript-config/consistent-casing": "off"
   }
 }

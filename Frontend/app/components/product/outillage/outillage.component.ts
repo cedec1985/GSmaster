@@ -1,8 +1,7 @@
-import { CommonModule, CurrencyPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit} from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { CartComponent } from '../../cart/cart.component';
 import { CategoriesmockService } from '../../../services/categoriesmock.service';
 import { ProduitresultComponent } from "../../produitresult/produitresult.component";
 
@@ -12,7 +11,7 @@ import { ProduitresultComponent } from "../../produitresult/produitresult.compon
     standalone: true,
     templateUrl: './outillage.component.html',
     styleUrl: './outillage.component.scss',
-    imports: [CommonModule, RouterModule, ReactiveFormsModule, CartComponent, CurrencyPipe, ProduitresultComponent]
+    imports: [CommonModule, RouterModule, ReactiveFormsModule, ProduitresultComponent]
 })
 export class OutillageComponent implements OnInit{
 

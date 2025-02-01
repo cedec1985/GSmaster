@@ -1,21 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Article } from '../../models/article';
 import { Categorie } from '../../models/categorie';
 import { PanierService } from '../../services/panier.service';
-import { AccessoiresdetailsComponent } from '../product-details/accessoiresdetails/accessoiresdetails.component';
-import { MobilierdetailsComponent } from '../product-details/mobilierdetails/mobilierdetails.component';
-import { OutillagedetailsComponent } from '../product-details/outillagedetails/outillagedetails.component';
-import { PlantesdetailsComponent } from '../product-details/plantesdetails/plantesdetails.component';
 
 @Component({
   selector: 'app-produitresult',
   templateUrl: './produitresult.component.html',
   styleUrls: ['./produitresult.component.css'],
-  imports: [CommonModule,ReactiveFormsModule,FormsModule,RouterModule,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
   standalone: true
 })
 export class ProduitresultComponent{
