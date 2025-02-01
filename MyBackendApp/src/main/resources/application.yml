@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5000/gardenstore_db
+    url: jdbc:postgresql://localhost:8080/gardenstore_db
     username: admin
     password: Artterrevil
     driver-class-name: com.postgresql.Driver
