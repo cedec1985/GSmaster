@@ -194,7 +194,8 @@
                 </goals>
                 <configuration>
                 <sources>
-                <source>src</source>
+                <source>src\target
+                </source>
                 ...
                 </sources>
                 </configuration>

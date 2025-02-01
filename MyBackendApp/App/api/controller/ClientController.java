@@ -1,12 +1,12 @@
-package java.gs.java.fs.api.controller;
-import java.gs.java.fs.domain.entities.Client;
-import java.gs.java.fs.api.models.dtos.ClientDTO;
-import java.gs.java.fs.api.models.form.ClientForm;
-import java.gs.java.fs.bll.AuthRequest;
-import java.gs.java.fs.bll.AuthResponse;
-import java.gs.java.fs.bll.ClientService;
+package App;
+import domain.entities.Client;
+import api.models.dtos.ClientDTO;
+import api.models.form.ClientForm;
+import bll.AuthRequest;
+import bll.AuthResponse;
+import bll.ClientService;
 import jakarta.validation.Valid;
-import java.gs.java.fs.utils.JwtTokenUtil;
+import utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import.util.List;
 
 @RestController
 @RequestMapping("/client")
