@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(scanBasePackages = "java.gs.java.fs",exclude ={DataSourceAutoConfiguration.class})
 
-@ComponentScan("java.gs.java.fs.utils")
+@ComponentScan("java.gs.java.fs")
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
