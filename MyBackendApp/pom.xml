@@ -194,7 +194,7 @@
                 </goals>
                 <configuration>
                 <sources>
-                <source>../App
+                <source>App
                 </source>
                 </sources>
                 </configuration>
