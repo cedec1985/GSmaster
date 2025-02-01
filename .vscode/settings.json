@@ -1,5 +1,9 @@
 {
-    "java.project.sourcePaths": [],
+    "java.project.sourcePaths": [
+        "../../OneDrive/Documents/GSmaster/MyBackendApp/target",
+        "../../OneDrive/Documents/GSmaster/MyBackendApp/App/bll",
+        "MyBackendApp/App"
+    ],
     "java.debug.settings.onBuildFailureProceed": true,
     "java.format.settings.url": ".vscode/java-formatter.xml"
 }

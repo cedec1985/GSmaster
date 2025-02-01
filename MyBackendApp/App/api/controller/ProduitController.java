@@ -1,9 +1,8 @@
-package java.gs.java.fs.api.controller;
-
-import java.gs.java.fs.api.models.dtos.ProduitDTO;
-import java.gs.java.fs.api.models.form.ProduitForm;
-import java.gs.java.fs.bll.ProduitService;
-import java.gs.java.fs.domain.entities.Produit;
+package controller;
+import models.dtos.ProduitDTO;
+import models.form.ProduitForm;
+import bll.ProduitService;
+import domain.entities.Produit;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package java.gs.java.fs.exceptions;
+package App;
 
     public class ClientException extends RuntimeException {
 

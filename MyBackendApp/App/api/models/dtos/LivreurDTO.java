@@ -1,5 +1,5 @@
-package java.gs.java.fs.api.models.dtos;
-import java.gs.java.fs.domain.entities.Livreur;
+package App;
+import domain.entities.Livreur;
 
 public record LivreurDTO(
         Long id,

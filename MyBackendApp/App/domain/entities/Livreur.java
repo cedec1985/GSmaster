@@ -1,4 +1,4 @@
-package java.gs.java.fs.domain.entities;
+package Apps;
 
 import jakarta.persistence.*;
 import lombok.Getter;

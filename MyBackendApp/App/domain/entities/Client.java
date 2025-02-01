@@ -1,4 +1,4 @@
-package java.gs.java.fs.domain.entities;
+package App;
 
 import java.gs.java.fs.api.validation.constraints.Password;
 import java.gs.java.fs.api.validation.constraints.Username;

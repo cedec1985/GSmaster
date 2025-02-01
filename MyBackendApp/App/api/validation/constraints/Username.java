@@ -1,6 +1,6 @@
-package java.gs.java.fs.api.validation.constraints;
+package App;
 
-import java.gs.java.fs.api.validation.validator.UsernameValidator;
+import api.validation.validator.UsernameValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 import org.springframework.core.annotation.AliasFor;

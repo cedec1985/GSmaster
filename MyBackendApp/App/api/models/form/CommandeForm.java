@@ -1,7 +1,7 @@
-package java.gs.java.fs.api.models.form;
+package App;
 
-import java.gs.java.fs.domain.entities.Commande;
-import java.gs.java.fs.domain.entities.Livreur;
+import domain.entities.Commande;
+import domain.entities.Livreur;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;

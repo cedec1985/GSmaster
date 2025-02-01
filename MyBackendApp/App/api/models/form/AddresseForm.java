@@ -1,9 +1,9 @@
-package java.gs.java.fs.api.models.form;
+package App;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-import java.gs.java.fs.domain.entities.Addresse;
+import domain.entities.Addresse;
 
 public record AddresseForm (
         @NotBlank

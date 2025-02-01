@@ -1,4 +1,4 @@
-package java.gs.java.fs.bll.impl;
+package impl;
 import java.gs.java.fs.dal.LivreurRepository;
 import java.gs.java.fs.bll.LivreurService;
 import java.gs.java.fs.domain.entities.Livreur;

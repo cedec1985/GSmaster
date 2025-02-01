@@ -1,4 +1,4 @@
-package java.gs.java.fs.bll;
+package impl;
 
 import lombok.Data;
 

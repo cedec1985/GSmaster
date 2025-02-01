@@ -1,8 +1,8 @@
-package java.gs.java.fs.api.controller;
-import java.gs.java.fs.api.models.dtos.CommandeDTO;
-import java.gs.java.fs.api.models.form.CommandeForm;
-import java.gs.java.fs.bll.CommandeService;
-import java.gs.java.fs.domain.entities.Commande;
+package controller;
+import models.dtos.CommandeDTO;
+import models.form.CommandeForm;
+import bll.CommandeService;
+import domain.entities.Commande;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

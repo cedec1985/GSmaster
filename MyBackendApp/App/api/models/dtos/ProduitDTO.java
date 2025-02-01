@@ -1,7 +1,6 @@
-package java.gs.java.fs.api.models.dtos;
+package App;
 
-
-import java.gs.java.fs.domain.entities.Produit;
+import domain.entities.Produit;
 
 public record ProduitDTO(Long id,
                          String nom,

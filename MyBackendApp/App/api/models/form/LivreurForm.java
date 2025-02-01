@@ -1,6 +1,6 @@
-package java.gs.java.fs.api.models.form;
+package App;
 
-import java.gs.java.fs.domain.entities.Livreur;
+import domain.entities.Livreur;
 import jakarta.validation.constraints.NotBlank;
 
 public record LivreurForm(

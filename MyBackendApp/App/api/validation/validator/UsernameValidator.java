@@ -1,6 +1,6 @@
-package java.gs.java.fs.api.validation.validator;
+package App;
 
-import java.gs.java.fs.api.validation.constraints.Username;
+import api.validation.constraints.Username;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

@@ -1,4 +1,4 @@
-package java.gs.java.fs.config;
+package App;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

@@ -1,6 +1,6 @@
-package java.gs.java.fs.api.validation.constraints;
+package App;
 
-import java.gs.java.fs.api.validation.validator.EmailValidator;
+import api.validation.validator.EmailValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 

@@ -1,4 +1,4 @@
-package java.gs.java.fs.config;
+package App;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

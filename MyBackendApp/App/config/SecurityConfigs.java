@@ -1,4 +1,4 @@
-package java.gs.java.fs.config;
+package App;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 

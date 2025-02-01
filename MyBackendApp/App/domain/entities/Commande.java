@@ -1,4 +1,4 @@
-package java.gs.java.fs.domain.entities;
+package App;
 
 import java.time.LocalDate;
 

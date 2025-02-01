@@ -1,8 +1,8 @@
-package java.gs.java.fs.api.controller;
-import java.gs.java.fs.api.models.dtos.LivreurDTO;
-import java.gs.java.fs.api.models.form.LivreurForm;
-import java.gs.java.fs.bll.LivreurService;
-import java.gs.java.fs.domain.entities.Livreur;
+package controller;
+import models.dtos.LivreurDTO;
+import models.form.LivreurForm;
+import bll.LivreurService;
+import domain.entities.Livreur;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

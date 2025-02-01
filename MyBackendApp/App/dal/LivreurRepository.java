@@ -1,4 +1,4 @@
-package java.gs.java.fs.dal;
+package App;
 
 import java.gs.java.fs.domain.entities.Livreur;
 import org.springframework.data.jpa.repository.JpaRepository;

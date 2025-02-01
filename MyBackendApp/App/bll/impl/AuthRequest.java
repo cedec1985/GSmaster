@@ -1,7 +1,5 @@
-package java.gs.java.fs.bll;
-
-
-import java.gs.java.fs.api.validation.constraints.Email;
+package impl;
+import validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;

@@ -1,4 +1,4 @@
-package java.gs.java.fs.bll.impl;
+package impl;
 
 import java.gs.java.fs.dal.ProduitRepository;
 import java.gs.java.fs.bll.ProduitService;

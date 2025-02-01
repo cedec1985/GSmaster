@@ -1,6 +1,6 @@
-package java.gs.java.fs.bll;
+package impl;
 
-import java.gs.java.fs.domain.entities.Client;
+import domain.entities.Client;
 
 import java.util.List;
 

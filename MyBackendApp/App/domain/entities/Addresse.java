@@ -1,4 +1,5 @@
-package App.domain.entities;
+package App;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;

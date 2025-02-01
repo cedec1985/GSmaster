@@ -1,6 +1,6 @@
-package java.gs.java.fs.api.models.dtos;
+package App;
 
-import java.gs.java.fs.domain.entities.Commande;
+import domain.entities.Commande;
 import java.time.LocalDate;
 
 /**
