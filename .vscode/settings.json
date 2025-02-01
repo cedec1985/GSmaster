@@ -1,6 +1,5 @@
 {
-    "java.project.sourcePaths": [
-        "MyBackendApp/Java"
-    ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.project.sourcePaths": [],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.format.settings.url": ".vscode/java-formatter.xml"
 }

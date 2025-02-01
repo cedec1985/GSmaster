@@ -1,4 +1,4 @@
-package java.gs.java.fs.utils;
+package App;
 import java.gs.java.fs.domain.entities.Client;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Component;

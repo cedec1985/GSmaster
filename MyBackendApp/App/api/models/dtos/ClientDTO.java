@@ -1,7 +1,7 @@
-package java.gs.java.fs.api.models.dtos;
+package App;
 
-import java.gs.java.fs.domain.entities.Addresse;
-import java.gs.java.fs.domain.entities.Client;
+import App.domain.entities.Addresse;
+import App.domain.entities.Client;
 
 public record ClientDTO(
         Long id,
