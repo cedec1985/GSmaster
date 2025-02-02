@@ -15,7 +15,7 @@ public record AddresseForm (
         Integer addresseNumero,
         @NotNull
         Integer addresseCodepostal
-)
+){
     public Addresse toEntity(){
         Addresse addresse = new Addresse();
         addresse.setAddresseCodepostal(addresseCodepostal);
@@ -24,4 +24,4 @@ public record AddresseForm (
         addresse.setAddresseNumero(addresseNumero);
         return addresse;
     }
-
+}
