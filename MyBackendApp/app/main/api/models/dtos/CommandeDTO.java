@@ -1,6 +1,8 @@
 package app.main;
 
 import app.main.domain.entities.Commande;
+
+import java.math.BigInteger;
 import java.time.LocalDate;
 
 public record CommandeDTO (
@@ -8,7 +10,7 @@ public record CommandeDTO (
     Integer montant,
     LocalDate dateCommande,
     Integer quantite,
-    Integer nCommande
+    BigInteger nCommande
 )
     {
     public static CommandeDTO fromEntity(Commande commande) {

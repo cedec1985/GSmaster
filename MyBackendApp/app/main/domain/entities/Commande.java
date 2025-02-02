@@ -1,5 +1,6 @@
 package app.main;
 
+import java.beans.Transient;
 import java.time.LocalDate;
 
 import jakarta.persistence.*;
@@ -11,6 +12,13 @@ import lombok.Setter;
 @Entity
 @Table(name = "commande")
 public class Commande {
+
+        @Transient
+    private Commande commande;
+    public Commande() { }
+    public Commande(Commande commande) {
+        this.commande= commande;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
