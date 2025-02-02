@@ -10,7 +10,7 @@ public record CommandeDTO (
     Integer montant,
     LocalDate dateCommande,
     Integer quantite,
-    BigInteger nCommande
+    Integer nCommande
 )
     {
     public static CommandeDTO fromEntity(Commande commande) {
