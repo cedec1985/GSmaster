@@ -26,7 +26,7 @@ public class Livreur {
     private String nomContact;
 
     @Column(name ="N_TVA", nullable = false, length = 25)
-    private String N_TVA;
+    private Integer N_TVA;
 
     @OneToMany (mappedBy = "deliveredBy")
     private List<Commande> commandes;
