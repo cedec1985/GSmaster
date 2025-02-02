@@ -4,7 +4,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import domain.entities.Addresse;
-
 public record AddresseForm (
         @NotBlank
         String addresseRue,

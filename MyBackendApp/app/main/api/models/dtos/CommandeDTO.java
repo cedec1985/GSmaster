@@ -1,4 +1,4 @@
-package App;
+package models.dtos;
 
 import domain.entities.Commande;
 import java.time.LocalDate;
