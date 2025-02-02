@@ -2,9 +2,9 @@ package app.main;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import api.models.dtos.ProduitDTO;
+import app.main.api.models.dtos.ProduitDTO;
 import app.main.domain.entities.Addresse;
-import domain.entities.Produit;
+import app.main.domain.entities.Produit;
 
 public record AddresseForm (
         @NotBlank
