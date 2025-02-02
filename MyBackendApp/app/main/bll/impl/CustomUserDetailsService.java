@@ -1,6 +1,6 @@
-package impl;
+package app.main;
 
-import java.gs.java.fs.dal.ClientRepository;
+import app.main.dal.ClientRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

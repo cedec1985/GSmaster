@@ -1,5 +1,5 @@
-package App;
-import domain.entities.Livreur;
+package app.main;
+import app.main.domain.entities.Livreur;
 
 public record LivreurDTO(
         Long id,

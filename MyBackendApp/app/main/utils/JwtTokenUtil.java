@@ -1,5 +1,5 @@
-package App;
-import java.gs.java.fs.domain.entities.Client;
+package app.main;
+import app.main.domain.entities.Client;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;

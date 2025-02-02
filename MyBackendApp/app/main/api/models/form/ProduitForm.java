@@ -1,7 +1,7 @@
-package App;
+package app.main;
 
-import domain.entities.Description;
-import domain.entities.Produit;
+import app.main.domain.entities.Description;
+import app.main.domain.entities.Produit;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

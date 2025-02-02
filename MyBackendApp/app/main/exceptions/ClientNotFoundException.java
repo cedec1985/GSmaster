@@ -1,4 +1,4 @@
-package App;
+package app.main;
 
 import jdk.jshell.spi.ExecutionControl;
 

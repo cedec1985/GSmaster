@@ -1,6 +1,6 @@
-package impl;
+package app.main;
 
-import java.gs.java.fs.domain.entities.Produit;
+import app.main.domain.entities.Produit;
 
 import java.util.List;
 

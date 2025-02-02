@@ -1,8 +1,8 @@
-package impl;
+package app.main;
 
-import java.gs.java.fs.dal.ClientRepository;
-import java.gs.java.fs.bll.ClientService;
-import java.gs.java.fs.domain.entities.Client;
+import app.main.dal.ClientRepository;
+import app.main.bll.ClientService;
+import app.main.domain.entities.Client;
 import jakarta.annotation.Resource;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;

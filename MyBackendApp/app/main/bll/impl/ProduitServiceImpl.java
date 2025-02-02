@@ -1,8 +1,8 @@
-package impl;
+package app.main;
 
-import java.gs.java.fs.dal.ProduitRepository;
-import java.gs.java.fs.bll.ProduitService;
-import java.gs.java.fs.domain.entities.Produit;
+import app.main.dal.ProduitRepository;
+import app.main.bll.ProduitService;
+import app.main.domain.entities.Produit;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

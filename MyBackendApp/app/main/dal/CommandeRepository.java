@@ -1,4 +1,4 @@
-package App;
+package app.main;
 
 import org.apache.el.stream.Optional;
 import org.jetbrains.annotations.NotNull;

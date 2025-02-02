@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import api.validation.validator.EmailValidator;
+import app.main.api.validation.validator.EmailValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 

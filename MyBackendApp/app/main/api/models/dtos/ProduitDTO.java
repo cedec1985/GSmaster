@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import domain.entities.Produit;
+import app.main.domain.entities.Produit;
 
 public record ProduitDTO(Long id,
                          String nom,

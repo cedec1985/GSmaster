@@ -1,8 +1,8 @@
-package impl;
+package app.main;
 
-import java.gs.java.fs.bll.CommandeService;
-import java.gs.java.fs.dal.CommandeRepository;
-import java.gs.java.fs.domain.entities.Commande;
+import app.main.bll.CommandeService;
+import app.main.dal.CommandeRepository;
+import app.main.domain.entities.Commande;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package models.dtos;
+package app.main;
 
-import domain.entities.Addresse;
-import domain.entities.Client;
+import app.main.domain.entities.Addresse;
+import app.main.domain.entities.Client;
 
 public record ClientDTO(
         Long id,

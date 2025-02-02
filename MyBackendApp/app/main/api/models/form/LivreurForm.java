@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import domain.entities.Livreur;
+import app.main.domain.entities.Livreur;
 import jakarta.validation.constraints.NotBlank;
 
 public record LivreurForm(

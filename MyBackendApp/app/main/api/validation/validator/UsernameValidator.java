@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import api.validation.constraints.Username;
+import app.main.api.validation.constraints.Username;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

@@ -1,4 +1,4 @@
-package impl;
+package app.main;
 import validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

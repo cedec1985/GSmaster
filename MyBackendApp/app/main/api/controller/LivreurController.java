@@ -1,8 +1,8 @@
-package controller;
-import models.dtos.LivreurDTO;
-import models.form.LivreurForm;
-import bll.LivreurService;
-import domain.entities.Livreur;
+package app.main;
+import app.main.models.dtos.LivreurDTO;
+import app.main.models.form.LivreurForm;
+import app.main.bll.LivreurService;
+import app.main.domain.entities.Livreur;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package App;
+package app.main;
 
     public class ClientException extends RuntimeException {
 

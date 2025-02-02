@@ -1,6 +1,6 @@
-package impl;
+package app.main;
 
-import java.gs.java.fs.domain.entities.Commande;
+import app.main.domain.entities.Commande;
 
 import java.util.List;
 

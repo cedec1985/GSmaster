@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import java.gs.java.fs.api.validation.constraints.Password;
+import app.main.api.validation.constraints.Password;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

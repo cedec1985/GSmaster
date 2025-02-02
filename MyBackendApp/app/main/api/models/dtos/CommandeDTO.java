@@ -1,11 +1,7 @@
-package models.dtos;
+package app.main;
 
-import domain.entities.Commande;
+import app.main.domain.entities.Commande;
 import java.time.LocalDate;
-
-/**
- * DTO for {@link Commande}
- */
 
 public record CommandeDTO (
     Long id,

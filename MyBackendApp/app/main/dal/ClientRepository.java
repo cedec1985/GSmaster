@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import java.gs.java.fs.domain.entities.Client;
+import app.main.domain.entities.Client;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

@@ -1,4 +1,4 @@
-package Apps;
+package app.main;
 
 import jakarta.persistence.*;
 import lombok.Getter;

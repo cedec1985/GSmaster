@@ -1,7 +1,7 @@
-package App;
+package app.main;
 
-import domain.entities.Commande;
-import domain.entities.Livreur;
+import app.main.domain.entities.Commande;
+import app.main.domain.entities.Livreur;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;

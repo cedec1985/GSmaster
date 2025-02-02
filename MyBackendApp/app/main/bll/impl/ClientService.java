@@ -1,4 +1,4 @@
-package impl;
+package app.main;
 
 import domain.entities.Client;
 

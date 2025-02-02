@@ -1,8 +1,8 @@
-package impl;
+package app.main;
 
 import java.util.List;
 
-import java.gs.java.fs.domain.entities.Livreur;
+import app.main.domain.entities.Livreur;
 
 public interface LivreurService {
     Livreur getOne(Long id);

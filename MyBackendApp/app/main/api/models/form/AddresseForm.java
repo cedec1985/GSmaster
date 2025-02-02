@@ -1,9 +1,11 @@
-package App;
+package app.main;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import api.models.dtos.ProduitDTO;
+import app.main.domain.entities.Addresse;
+import domain.entities.Produit;
 
-import domain.entities.Addresse;
 public record AddresseForm (
         @NotBlank
         String addresseRue,
@@ -13,8 +15,7 @@ public record AddresseForm (
         Integer addresseNumero,
         @NotNull
         Integer addresseCodepostal
-){
-    
+)
     public Addresse toEntity(){
         Addresse addresse = new Addresse();
         addresse.setAddresseCodepostal(addresseCodepostal);
@@ -23,4 +24,4 @@ public record AddresseForm (
         addresse.setAddresseNumero(addresseNumero);
         return addresse;
     }
-}
+

@@ -1,7 +1,7 @@
-package impl;
-import java.gs.java.fs.dal.LivreurRepository;
-import java.gs.java.fs.bll.LivreurService;
-import java.gs.java.fs.domain.entities.Livreur;
+package app.main;
+import app.main.dal.LivreurRepository;
+import app.main.bll.LivreurService;
+import app.main.domain.entities.Livreur;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

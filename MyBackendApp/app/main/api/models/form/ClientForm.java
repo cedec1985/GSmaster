@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import domain.entities.Client;
+import app.main.domain.entities.Client;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

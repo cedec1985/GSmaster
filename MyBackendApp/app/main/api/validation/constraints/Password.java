@@ -1,6 +1,6 @@
-package App;
+package app.main;
 
-import api.validation.validator.PasswordValidator;
+import app.main.api.validation.validator.PasswordValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 import org.springframework.core.annotation.AliasFor;
