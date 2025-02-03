@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"Frontend/app"
+		],
+		"java.debug.settings.onBuildFailureProceed": true,
+		"java.format.settings.url": ".vscode/java-formatter.xml"
+	}
+}
