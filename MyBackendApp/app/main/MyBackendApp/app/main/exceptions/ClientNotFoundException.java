@@ -1,4 +1,4 @@
-package app.main;
+package MyBackendApp.app.main.exceptions;
 
 import jdk.jshell.spi.ExecutionControl;
 

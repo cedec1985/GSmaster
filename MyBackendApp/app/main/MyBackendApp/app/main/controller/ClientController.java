@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 import MyBackendApp.app.main.api.models.dtos.ClientDTO;
 import MyBackendApp.app.main.api.models.form.ClientForm;
 import MyBackendApp.app.main.domain.entities.Client;
+import MyBackendApp.app.main.utils.JwtTokenUtil;
 import MyBackendApp.app.main.bll.impl.AuthRequest;
 import MyBackendApp.app.main.bll.impl.AuthResponse;
 import MyBackendApp.app.main.bll.impl.ClientService;
 import jakarta.validation.Valid;
-import utils.JwtTokenUtil;
 
 
 @RestController

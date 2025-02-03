@@ -1,4 +1,4 @@
-package app.main;
+package MyBackendApp.app.main.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 

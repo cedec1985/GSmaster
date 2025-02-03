@@ -19,9 +19,9 @@ import java.util.List;
         }
 
         @GetMapping
-        public ResponseEntity<List<ProduitDTO>> getAll() {
+        public ResponseEntity<List<ProduitDTO>> getAll(Produit produit) {
             return ResponseEntity.ok(
-                    produitService.getAll().stream()
+                    produitService.getAll(produit).stream()
                             .map( ProduitDTO::fromEntity)
                             .toList()
             );

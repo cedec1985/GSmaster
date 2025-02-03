@@ -1,5 +1,5 @@
-package app.main;
-import app.main.domain.entities.Client;
+package MyBackendApp.app.main.utils;
+import MyBackendApp.app.main.domain.entities.Client;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;

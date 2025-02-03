@@ -1,4 +1,4 @@
-package app.main;
+package MyBackendApp.app.main.exceptions;
 
     public class ClientException extends RuntimeException {
 

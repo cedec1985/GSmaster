@@ -13,7 +13,6 @@ import lombok.Setter;
 @Table(name = "commande")
 public class Commande {
 
-        @Transient
     private Commande commande;
     public Commande() { }
     public Commande(Commande commande) {
