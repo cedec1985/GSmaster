@@ -1,14 +1,14 @@
 version: "3.9"
 services:
     backend:
-        image: postgres:latest
+        image: nginx:latest
         container_name: MyBackendApp
         build:
             context: ./MyBackendApp/app/main
         ports:
             - "8080:80"
     frontend:
-        image: node
+        image: postgres:latest
         container_name: Frontend
         build:
             context: ./Frontend

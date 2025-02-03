@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:8080/gardenstore_db
-    username: admin
-    password: Artterrevil
+    url: jdbc:postgresql://localhost:4200/gardenstore_db
+    username: cedric
+    password: Artterrevil-85
     driver-class-name: com.postgresql.Driver
     autoconfigure:
       exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
