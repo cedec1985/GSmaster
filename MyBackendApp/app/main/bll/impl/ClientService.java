@@ -1,8 +1,8 @@
 package app.main;
 
-import domain.entities.Client;
-
 import java.util.List;
+
+import MyBackendApp.app.main.domain.entities.Client;
 
 
 public interface ClientService {
