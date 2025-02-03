@@ -1,27 +1,27 @@
 {
   "$schema": "node_modules/nx/schemas/project-schema.json",
-  "name": "MyApp",
+  "name": "Frontend",
   "projectType": "application",
   "generators": {},
-  "sourceRoot": "src",
+  "sourceRoot": "app",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "options": {
         "outputPath": "dist/my-app",
-        "index": "src/index.html",
-        "browser": "src/main.ts",
+        "index": "app/index.html",
+        "browser": "app/main.ts",
         "polyfills": [
           "zone.js"
         ],
         "tsConfig": "tsconfig.app.json",
         "assets": [
-          "src/favicon.ico",
-          "src/assets"
+          "app/favicon.ico",
+          "app/assets"
         ],
         "styles": [
-          "src/styles.css"
+          "app/styles.css"
         ],
         "scripts": []
       },
@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "MyApp:build:production"
+          "buildTarget": "Frontend:build:production"
         },
         "development": {
-          "buildTarget": "MyApp:build:development"
+          "buildTarget": "Frontend:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "MyApp:build"
+        "buildTarget": "Frontend:build"
       }
     },
     "test": {
@@ -76,11 +76,11 @@
         ],
         "tsConfig": "tsconfig.spec.json",
         "assets": [
-          "src/favicon.ico",
-          "src/assets"
+          "app/favicon.ico",
+          "app/assets"
         ],
         "styles": [
-          "src/styles.css"
+          "app/styles.css"
         ],
         "scripts": []
       }
