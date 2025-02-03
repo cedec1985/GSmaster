@@ -1,8 +1,8 @@
 package MyBackendApp.app.main.controller;
-import app.main.models.dtos.ProduitDTO;
-import app.main.models.form.ProduitForm;
-import app.main.bll.ProduitService;
-import app.main.domain.entities.Produit;
+import MyBackendApp.app.main.api.models.dtos.ProduitDTO;
+import MyBackendApp.app.main.api.models.form.ProduitForm;
+import MyBackendApp.app.main.bll.impl.ProduitService;
+import MyBackendApp.app.main.domain.entities.Produit;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

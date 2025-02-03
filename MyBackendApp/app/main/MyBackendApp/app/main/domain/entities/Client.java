@@ -1,7 +1,7 @@
 package MyBackendApp.app.main.domain.entities;
 
 import MyBackendApp.app.main.api.validation.constraints.Password;
-import MyBackendApp.main.api.validation.constraints.Username;
+import MyBackendApp.app.main.api.validation.constraints.Username;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

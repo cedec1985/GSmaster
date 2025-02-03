@@ -1,8 +1,8 @@
 package MyBackendApp.app.main.controller;
-import app.maion.models.dtos.CommandeDTO;
-import app.main.models.form.CommandeForm;
-import app.main.bll.CommandeService;
-import app.main.domain.entities.Commande;
+import MyBackendApp.app.main.api.models.dtos.CommandeDTO;
+import MyBackendApp.app.main.api.models.form.CommandeForm;
+import MyBackendApp.app.main.bll.impl.CommandeService;
+import MyBackendApp.app.main.domain.entities.Commande;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

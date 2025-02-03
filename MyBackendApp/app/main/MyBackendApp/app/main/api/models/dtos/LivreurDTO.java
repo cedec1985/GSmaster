@@ -1,5 +1,5 @@
 package MyBackendApp.app.main.api.models.dtos;
-import app.main.domain.entities.Livreur;
+import MyBackendApp.app.main.domain.entities.Livreur;
 
 public record LivreurDTO(
         Long id,
@@ -8,15 +8,15 @@ public record LivreurDTO(
         String nomContact
 
 ) {
-    public static LivreurDTO fromEntity(Livreur livraison) {
-        if (livraison == null)
+    public static LivreurDTO fromEntity(Livreur livreur) {
+        if (livreur == null)
             return null;
 
         return new LivreurDTO(
-                livraison.getId(),
-                livraison.getNom(),
-                livraison.getPrenom(),
-                livraison.getNomContact()
+                livreur.getId(),
+                livreur.getNom(),
+                livreur.getPrenom(),
+                livreur.getNomContact()
                 );
     }
 }

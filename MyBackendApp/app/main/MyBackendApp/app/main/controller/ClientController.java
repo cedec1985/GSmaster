@@ -1,4 +1,6 @@
 package MyBackendApp.app.main.controller;
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,9 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 import MyBackendApp.app.main.api.models.dtos.ClientDTO;
 import MyBackendApp.app.main.api.models.form.ClientForm;
 import MyBackendApp.app.main.domain.entities.Client;
-import bll.impl.AuthRequest;
-import bll.impl.AuthResponse;
-import bll.impl.ClientService;
+import MyBackendApp.app.main.bll.impl.AuthRequest;
+import MyBackendApp.app.main.bll.impl.AuthResponse;
+import MyBackendApp.app.main.bll.impl.ClientService;
 import jakarta.validation.Valid;
 import utils.JwtTokenUtil;
 
@@ -43,7 +45,7 @@ public class ClientController {
         this.jwtUtil = jwtUtil;
     }
     @GetMapping
-    public ResponseEntity<App<ClientDTO>> getAll(Client client) {
+    public ResponseEntity<List<ClientDTO>> getAll(Client client) {
         List<Client> users = clientService.getAll(client);
         List<ClientDTO> dtos = users.stream()
                 .map(ClientDTO::fromEntity)

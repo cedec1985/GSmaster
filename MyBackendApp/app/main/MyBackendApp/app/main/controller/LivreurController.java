@@ -1,8 +1,9 @@
 package MyBackendApp.app.main.controller;
-import app.main.models.dtos.LivreurDTO;
-import app.main.models.form.LivreurForm;
-import app.main.bll.LivreurService;
-import app.main.domain.entities.Livreur;
+
+import MyBackendApp.app.main.api.models.dtos.LivreurDTO;
+import MyBackendApp.app.main.api.models.form.LivreurForm;
+import MyBackendApp.app.main.bll.impl.LivreurService;
+import MyBackendApp.app.main.domain.entities.Livreur;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,14 +20,14 @@ import java.util.List;
         public LivreurController(LivreurService livreurService) {
             this.livreurService = livreurService;
         }
-        @GetMapping
-        public ResponseEntity<List<LivreurDTO>> getAll() {
-            return ResponseEntity.ok(
-                    livreurService.getAll().stream()
-                            .map( LivreurDTO::fromEntity )
-                            .toList()
-            );
-        }
+         @GetMapping
+    public ResponseEntity<List<LivreurDTO>> getAll(Livreur livreur) {
+        List<Livreur> users = livreurService.getAll(livreur);
+        List<LivreurDTO> dtos = users.stream()
+                .map(LivreurDTO::fromEntity)
+                .toList();
+        return ResponseEntity.ok( dtos );
+    }
         @GetMapping("/{id}")
         public ResponseEntity<LivreurDTO> getOne(@PathVariable Long id){
             return ResponseEntity.ok(
