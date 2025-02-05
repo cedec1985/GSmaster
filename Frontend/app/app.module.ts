@@ -46,7 +46,7 @@ import { ContactComponent } from './components/contact/contact.component';
     TableModule,ProfiluserRoutingModule,ProfiluserModule,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
   
   exports: [HomeComponent,AppComponent,NavbarComponent,RegisterComponent,FormsModule, ReactiveFormsModule,StockEpuiseDirective,
-    ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
+    ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent, BrowserAnimationsModule,
     AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserDisplayComponent,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent],
     
   providers: [AuthService,CookieService,PanierService,CategoriesmockService,CategoryService],
