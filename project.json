@@ -3,25 +3,25 @@
   "name": "Frontend",
   "projectType": "application",
   "generators": {},
-  "sourceRoot": "app",
+  "sourceRoot": "Frontend/app",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "options": {
         "outputPath": "dist/my-app",
-        "index": "app/index.html",
-        "browser": "app/main.ts",
+        "index": "Frontend/app/index.html",
+        "browser": "Frontend/app/main.ts",
         "polyfills": [
           "zone.js"
         ],
         "tsConfig": "tsconfig.app.json",
         "assets": [
-          "app/favicon.ico",
-          "app/assets"
+          "Frontend/app/favicon.ico",
+          "Frontend/app/assets"
         ],
         "styles": [
-          "app/styles.css"
+          "Frontend/app/styles.css"
         ],
         "scripts": []
       },
@@ -77,10 +77,10 @@
         "tsConfig": "tsconfig.spec.json",
         "assets": [
           "app/favicon.ico",
-          "app/assets"
+          "Frontend/app/assets"
         ],
         "styles": [
-          "app/styles.css"
+          "Frontend/app/styles.css"
         ],
         "scripts": []
       }
