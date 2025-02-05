@@ -7,7 +7,8 @@
 	"settings": {
 		"java.project.sourcePaths": [
 			"MyBackendApp/app/main",
-			"MyBackendApp/target"
+			"MyBackendApp/app/target",
+			"Frontend"
 		],
 		"java.debug.settings.onBuildFailureProceed": true,
 		"java.format.settings.url": ".vscode/java-formatter.xml"
