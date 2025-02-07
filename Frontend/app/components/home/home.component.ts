@@ -97,6 +97,8 @@ export class HomeComponent {
 
     this.isAuthenticated = email === 'cedricdecraim@msn.com' && password === 'Test1234@';
     this.auth.seConnecter();
+    this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';
     return this.isAuthenticated;
-  }
+  } 
+
 }
