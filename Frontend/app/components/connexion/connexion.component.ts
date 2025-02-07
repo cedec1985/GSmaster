@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { EmailValidator, Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service.service';
 
@@ -25,7 +25,8 @@ export class ConnexionComponent {
     
     private router: Router,
     private formBuilder: FormBuilder,
-    private service: AuthService
+    private service: AuthService,
+    private validator : EmailValidator
   ) {{
     this.Formulaire();
   }}
@@ -40,21 +41,25 @@ export class ConnexionComponent {
   }
 
   login() { 
-
+   
       if
         (this.loginForm.value.password === 'Test1234@' && this.loginForm.value.email === 'cedricdecraim@msn.com')
         {
+      
       this.service.login(this.email, this.password) 
       console.log('Login réussi');
       alert('bravo, vous êtes connecté');
       console.log(this.maskPassword(this.loginForm.value.password));
       const jsonData = JSON.stringify(this.email);
       localStorage.setItem('user', this.email);
-      this.service.seConnecter();// appel de la fonction de connexion
       this.router.navigate(['/']);
+      this.service.seConnecter();// appel de la fonction de connexion
       this.loginForm.reset();
       
-       }}
+       }
+      
+      
+      }
        seDeconnecter(){
 
         (this.router.navigate(['/connexion']), //rediriger vers la page 'connexion' si admin pas connecté
