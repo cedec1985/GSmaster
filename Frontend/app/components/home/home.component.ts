@@ -16,7 +16,7 @@ import { CategoryComponent } from '../category/category.component';
 })
 export class HomeComponent {
 
-  @Input() isAuthenticated: boolean = false;
+  @Input() isAuthenticated: boolean = true;
   message!: string;
   category!: any;
   categorie!: any;
@@ -96,9 +96,9 @@ export class HomeComponent {
    login(email: string, password: string): boolean {
 
     this.isAuthenticated = email === 'cedricdecraim@msn.com' && password === 'Test1234@';
-    this.auth.seConnecter();
     this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';
     return this.isAuthenticated;
+   
   } 
 
 }
