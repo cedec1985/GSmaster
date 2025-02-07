@@ -503,7 +503,8 @@ font-weight: bold;
   color :#c00;
     
 }
-/* Utilisation de primeng */
+/* ---------------Utilisation de primeng---------------- */
+
 /* Order */
 @layer reset, primeng;
 
