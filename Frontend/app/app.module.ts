@@ -35,6 +35,7 @@ import { PlantesdetailsComponent } from './components/product-details/plantesdet
 import { AccessoiresdetailsComponent } from './components/product-details/accessoiresdetails/accessoiresdetails.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [],
@@ -42,11 +43,11 @@ import { ContactComponent } from './components/contact/contact.component';
   imports: [
     CommonModule,RouterModule,AppComponent,NavbarComponent, HomeComponent,ProfiluserModule, FormsModule, ReactiveFormsModule,
     RegisterComponent,ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
-    AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,NoopAnimationsModule,
+    AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,NoopAnimationsModule, BrowserModule,
     TableModule,ProfiluserRoutingModule,ProfiluserModule,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
   
   exports: [HomeComponent,AppComponent,NavbarComponent,RegisterComponent,FormsModule, ReactiveFormsModule,StockEpuiseDirective,
-    ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent, NoopAnimationsModule,
+    ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent, NoopAnimationsModule,BrowserModule,
     AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserDisplayComponent,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent],
     
   providers: [AuthService,CookieService,PanierService,CategoriesmockService,CategoryService],
