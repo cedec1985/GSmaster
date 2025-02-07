@@ -51,9 +51,9 @@ export class ConnexionComponent {
       alert('bravo, vous êtes connecté');
       console.log(this.maskPassword(this.loginForm.value.password));
       const jsonData = JSON.stringify(this.email);
-      localStorage.setItem('user', this.email);
+      localStorage.setItem('email utilisateur : ', jsonData);
+      this.service.seConnecter();      // appel de la fonction de connexion
       this.router.navigate(['/']);
-      this.service.seConnecter();// appel de la fonction de connexion
       this.loginForm.reset();
       
        }
