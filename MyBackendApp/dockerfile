@@ -9,5 +9,5 @@ RUN mvn -B -f /MyBackendApp/pom.xml clean package
 # Package stage
 #
 FROM nginx:latest
-COPY --from=build /MyBackendApp/app/target/projetjavafinal-1.0-SNAPSHOT.jar /usr/local/lib/projetjavafinal.jar
+COPY --from=build /MyBackendApp/target/projetjavafinal-1.0.0.jar /usr/local/lib/projetjavafinal.jar
 ENTRYPOINT ["java","-jar","/usr/local/lib/projetjavafinal.jar"]
