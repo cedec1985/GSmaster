@@ -57,8 +57,6 @@ export class ConnexionComponent {
       this.loginForm.reset();
       
        }
-      
-      
       }
        seDeconnecter(){
 
