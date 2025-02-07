@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import {Form,FormBuilder,FormGroup,FormsModule,ReactiveFormsModule,Validators} from '@angular/forms';
-import { Router} from '@angular/router';
+import { Component } from '@angular/core';
+import { Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service.service';
-import { Component, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-connexion',
@@ -43,14 +43,14 @@ export class ConnexionComponent {
 
       if
         (this.loginForm.value.password === 'Test1234@' && this.loginForm.value.email === 'cedricdecraim@msn.com')
-       {
-
+        {
+      this.service.login(this.email, this.password) 
+      console.log('Login réussi');
+      alert('bravo, vous êtes connecté');
       console.log(this.maskPassword(this.loginForm.value.password));
       const jsonData = JSON.stringify(this.email);
       localStorage.setItem('user', this.email);
-      console.log('Login réussi');
-      alert('vous êtes connecté');
-      this.service.login(this.email, this.password)
+      this.service.seConnecter();// appel de la fonction de connexion
       this.router.navigate(['/']);
       this.loginForm.reset();
       
@@ -59,7 +59,8 @@ export class ConnexionComponent {
 
         (this.router.navigate(['/connexion']), //rediriger vers la page 'connexion' si admin pas connecté
         console.log('vous êtes déconnecté!'),
-        alert("vous êtes déconnecté")
+        alert("vous êtes déconnecté"),
+        this.service.seDeconnecter()
       );
     }
       // Fonction pour masquer le mot de passe avec des étoiles
