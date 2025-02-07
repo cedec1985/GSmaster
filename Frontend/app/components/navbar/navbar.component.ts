@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
 
     ngOnInit(){
         this.logo ='assets/gardenstorelogo.png';
-        this.IsUserConnected(this.isConnected);
+        this.IsUserConnected(this.isConnected = false);
     }
 
     IsUserConnected(isConnected : boolean ) {

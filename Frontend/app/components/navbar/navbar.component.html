@@ -38,17 +38,17 @@
             </li>
           </ul>
         </div>
+        <div *ngIf="IsUserConnected(true); then connecte; else pasconnecte">                <!--directive structurelle : affiche un message : en stock ou stock épuisé -->
+        </div>
+      <ng-template #connecte>
+        <div style="color :blue">
+        Connecté avec {{this.elementRef.nativeElement.innerText}}
+        </div>
+      </ng-template>
+      <ng-template #pasconnecte>
+        <div style="color:red">
+       Vous n'êtes pas connecté !
+        </div>
+      </ng-template>
     </div>
-    <div *ngIf="isConnected == true; then connecte; else pasconnecte">                <!--directive structurelle : affiche un message : en stock ou stock épuisé -->
-    </div>
-  <ng-template #connecte>
-    <div style="color :blue">
-    Connecté avec {{this.elementRef.nativeElement.innerText}}
-    </div>
-  </ng-template>
-  <ng-template #pasconnecte>
-    <div style="color:red">
-   Vous n'êtes pas connecté !
-    </div>
-  </ng-template>
   </nav>
