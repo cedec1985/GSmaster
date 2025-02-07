@@ -4,7 +4,7 @@ services:
         image: nginx:latest
         container_name: MyBackendApp
         build:
-            context: ./MyBackendApp/app/main
+            context: ./MyBackendApp
         ports:
             - "8080:80"
     frontend:
