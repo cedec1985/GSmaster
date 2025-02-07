@@ -25,8 +25,7 @@ export class ConnexionComponent {
     
     private router: Router,
     private formBuilder: FormBuilder,
-    private service: AuthService,
-    private validator : EmailValidator
+    private service: AuthService
   ) {{
     this.Formulaire();
   }}
@@ -51,7 +50,7 @@ export class ConnexionComponent {
       alert('bravo, vous êtes connecté');
       console.log(this.maskPassword(this.loginForm.value.password));
       const jsonData = JSON.stringify(this.email);
-      localStorage.setItem('email utilisateur : ', jsonData);
+      localStorage.setItem('email utilisateur : ', this.loginForm.value.email);
       this.service.seConnecter();      // appel de la fonction de connexion
       this.router.navigate(['/']);
       this.loginForm.reset();

@@ -19,7 +19,7 @@ export class StockEpuiseDirective {
     if (this.quantity > 5) {
       this.elementRef.nativeElement.innerText = 'Stock épuisé';
     } else {
-      this.elementRef.nativeElement.innerText = '';
+      this.elementRef.nativeElement.innerText = 'En stock';
     }
   }
 }
