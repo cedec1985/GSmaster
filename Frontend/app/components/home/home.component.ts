@@ -16,7 +16,7 @@ import { CategoryComponent } from '../category/category.component';
 })
 export class HomeComponent {
 
-  @Input() isAuthenticated: boolean = true;
+  @Input() isAuthenticated: boolean = false;
   message!: string;
   category!: any;
   categorie!: any;
@@ -36,6 +36,7 @@ export class HomeComponent {
     this.urlmobilier ="assets/categories/mobilier.jpg";
     this.urlplantes ="assets/categories/plantes.jpeg";
     this.urlaccessoires ="assets/categories/accessoires.jpg";
+   
    
 
        this.service.getCategories().subscribe(data=>{
@@ -96,6 +97,7 @@ export class HomeComponent {
    login(email: string, password: string): boolean {
 
     this.isAuthenticated = email === 'cedricdecraim@msn.com' && password === 'Test1234@';
+    this.isAuthenticated = true;
     this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';
     return this.isAuthenticated;
    
