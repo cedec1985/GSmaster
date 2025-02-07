@@ -13,26 +13,25 @@ import { AuthService } from '../../services/auth-service.service';
 export class NavbarComponent implements OnInit {
     logo! :string;
     @Input() isConnected: boolean = false;
-    connected: boolean = false;
     
     constructor(public elementRef: ElementRef, private service :AuthService) {}
 
     ngOnInit(){
         this.logo ='assets/gardenstorelogo.png';
-        this.IsUserConnected();
+        this.IsUserConnected(this.isConnected);
     }
 
-    IsUserConnected() {
-    if(
-        this.service.login('','')) {
-        this.isConnected;
+    IsUserConnected(isConnected : boolean ) {
+    if(this.service.login('',''))
+         {
+        this.isConnected = false;
         }
-   else {
-    this.connected =true;
-    this.service.login("cedricdecraim@msn.com","Test1234@") == this.connected;
-    this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';
-             
+   if (
+    this.service.login("cedricdecraim@msn.com","Test1234@"))
+    {
+    this.isConnected =true;
+    this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';  
         }
-    
+    return isConnected;
 }
 }
