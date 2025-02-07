@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { EmailValidator, Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component} from '@angular/core';
+import { Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service.service';
 
@@ -13,14 +13,15 @@ import { AuthService } from '../../services/auth-service.service';
 })
 
 export class ConnexionComponent {
-  
+
+ 
   loginForm! :FormGroup;
   data!: Form;
   role: string = '';
   password: string = '';
   cookieService: any;
   email: string ='';
-
+  
   constructor(
     
     private router: Router,
@@ -57,6 +58,7 @@ export class ConnexionComponent {
       
        }
       }
+      
        seDeconnecter(){
 
         (this.router.navigate(['/connexion']), //rediriger vers la page 'connexion' si admin pas connecté

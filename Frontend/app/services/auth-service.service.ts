@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RegisterAPIForm} from '../models/user-create.form';
+import { RegisterAPIForm } from '../models/user-create.form';
 
 const BASE_URL = 'allow-control-access-origin: http://localhost:8080/client/insert';
 
@@ -29,6 +29,7 @@ constructor(private http: HttpClient) {}
   login(email: string, password: string): boolean {
 
     this.isAuthenticated = email === 'cedricdecraim@msn.com' && password === 'Test1234@';
+    this.seConnecter();
     return this.isAuthenticated;
   }
 

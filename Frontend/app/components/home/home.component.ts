@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { Category } from '../../models/category';
+import { AuthService } from '../../services/auth-service.service';
 import { CategoryService } from '../../services/categorie.service';
 import { CategoriesmockService } from '../../services/categoriesmock.service';
-import { AuthService } from '../../services/auth-service.service';
 import { CategoryComponent } from '../category/category.component';
 
 @Component({
@@ -16,6 +16,7 @@ import { CategoryComponent } from '../category/category.component';
 })
 export class HomeComponent {
 
+  @Input() isConnected: boolean = false;
   message!: string;
   category!: any;
   categorie!: any;
@@ -26,8 +27,7 @@ export class HomeComponent {
   urlplantes!:string;
   urlaccessoires!:string;
 
-
-  constructor(private service: CategoriesmockService, private categoryService : CategoryService, private router : Router, private auth :AuthService) {}
+  constructor(private service: CategoriesmockService, private categoryService : CategoryService, private router : Router, private auth :AuthService, public elementRef:ElementRef) {}
   
    ngOnInit(): void {
     this.message = 'Bienvenue sur Garden Store ! Visitez notre magasin dédié aux articles de jardin !';
@@ -93,4 +93,11 @@ export class HomeComponent {
      });
 
    }
-}
+   login() : boolean { 
+   if(true){
+    if(this.auth.estConnecte() !== null){
+      this.isConnected = true;
+      this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';  
+    }
+    return this.isConnected;
+}}}
