@@ -16,7 +16,7 @@ import { CategoryComponent } from '../category/category.component';
 })
 export class HomeComponent {
 
-  @Input() isConnected: boolean = false;
+  @Input() isAuthenticated: boolean = false;
   message!: string;
   category!: any;
   categorie!: any;
@@ -93,11 +93,10 @@ export class HomeComponent {
      });
 
    }
-   login() : boolean { 
-   if(true){
-    if(this.auth.estConnecte() !== null){
-      this.isConnected = true;
-      this.elementRef.nativeElement.innerText = 'cedricdecraim@msn.com';  
-    }
-    return this.isConnected;
-}}}
+   login(email: string, password: string): boolean {
+
+    this.isAuthenticated = email === 'cedricdecraim@msn.com' && password === 'Test1234@';
+    this.auth.seConnecter();
+    return this.isAuthenticated;
+  }
+}

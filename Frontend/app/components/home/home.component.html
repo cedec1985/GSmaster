@@ -1,22 +1,20 @@
 <span class="message" id="message">{{message}}</span>
-<span class="message de connexion" id="connexion"> Votre identifiant de connexion est :{{elementRef.nativeElement.innerText }}, vous êtes connecté !</span>
+<div *ngIf="isAuthenticated==true; then connecte; else pasconnecte">                <!--directive structurelle : affiche un message : en stock ou stock épuisé -->
+</div>
+<ng-template #connecte>
+<div style="color :blue">
+Vous êtes connecté avec cet identifiant : {{elementRef.nativeElement.innerText}}
+</div>
+</ng-template>
+<ng-template #pasconnecte>
+<div style="color:red">
+Vous n'êtes pas connecté
+</div>
+</ng-template>
 <div id="bas">
     <div class="row mb-4">
 
       <app-category></app-category>
-
-      <div *ngIf="isConnected==true; then connecte; else pasconnecte">                <!--directive structurelle : affiche un message : en stock ou stock épuisé -->
-      </div>
-    <ng-template #connecte>
-      <div style="color :blue">
-      Vous êtes connecté avec cet identifiant : {{elementRef.nativeElement.innerText}}
-      </div>
-    </ng-template>
-    <ng-template #pasconnecte>
-      <div style="color:red">
-     Vous n'êtes pas connecté
-      </div>
-    </ng-template>
 
       <div class="img-container">
        <img src="{{urloutillage}}"><img src="{{urlmobilier}}"><img src="{{urlplantes}}"><img src="{{urlaccessoires}}">
