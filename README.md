@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 Run 'npx nx run [projectname]' for a dev server with nx cloud.
 
 ## Code scaffolding
@@ -26,3 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## General information
+
+The following steps are required to launch the application :
+Before launching the application it is needed to connect to the database, next run the Main class from the backend project (Spring Boot) and configure a docker image file (postgres:latest) with the appropriate command in order to run the container with Docker Desktop. The next step is mentionned above in the second section of this file (development server).
