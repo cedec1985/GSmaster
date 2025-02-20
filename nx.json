@@ -1,10 +1,6 @@
 {
   "installation": {
     "version": "20.4.0"
-  },
-    "npmScope": "myorg",
-    "affected": {
-      "defaultBase": "main"
-    }
+  }
   }
   

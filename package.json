@@ -43,5 +43,9 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "nx": "^13.10.6",
     "typescript": "~5.4.2"
-  }
+  },
+  "npmScope": "myorg",
+    "affected": {
+      "defaultBase": "main"
+    }
 }
