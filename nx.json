@@ -1,6 +1,10 @@
 {
   "installation": {
-    "version": "20.4.0",
-    "name": "@my-org/root"
+    "version": "20.4.0"
+  },
+    "npmScope": "myorg",
+    "affected": {
+      "defaultBase": "main"
+    }
   }
-}
+  
