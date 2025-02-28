@@ -65,7 +65,7 @@ import org.springframework.stereotype.Component;
 
  @Override
  public void configure(AuthenticationManagerBuilder auth) throws Exception {
-         auth.MyAuthenticationProvider("admin", "password")
+         auth.MyAuthenticationProvider(myAuthenticationProvider)
      }
     @Override
     public boolean supports(Class<?> authentication) {
