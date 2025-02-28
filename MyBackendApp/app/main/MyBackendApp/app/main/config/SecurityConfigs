@@ -65,8 +65,7 @@ import org.springframework.stereotype.Component;
 
  @Override
  public void configure(AuthenticationManagerBuilder auth) throws Exception {
-         auth.inMemoryAuthentication()
-             .withUser("admin").password(bCryptPasswordEncoder().encode("password")).roles("USER");
+         auth.MyAuthenticationProvider("admin", "password")
      }
     @Override
     public boolean supports(Class<?> authentication) {
