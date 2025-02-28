@@ -1,18 +1,25 @@
 package MyBackendApp.app.main.domain.entities;
 
-import MyBackendApp.app.main.api.validation.constraints.Password;
-import MyBackendApp.app.main.api.validation.constraints.Username;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import MyBackendApp.app.main.api.validation.constraints.Password;
+import MyBackendApp.app.main.api.validation.constraints.Username;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -68,11 +75,12 @@ public class Client implements UserDetails {
 
     @Override
     public String getPassword() {
-        return password;
+        return password==null ? "" : "password";
     }
 
     @Override
     public String getUsername() {
-        return mail;
+        return mail ==null ? "" : "admin";
     }
+
 }

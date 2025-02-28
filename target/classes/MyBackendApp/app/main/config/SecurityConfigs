@@ -52,12 +52,12 @@ import org.springframework.stereotype.Component;
 }
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getName();
-        String password = (String) authentication.getCredentials();
+        String username = authentication.getEmail();
+        String password = (String) authentication.getPassword();
         
         // Implement your authentication logic here
-        if ("user".equals(username) && "password".equals(password)) {
-            return new UsernamePasswordAuthenticationToken(username, password);
+        if ("admin".equals(username) && "password".equals(password)) {
+            return new UsernamePasswordAuthenticationToken(username, password,user.getAuthorities());
         }
         throw new BadCredentialsException("Invalid username or password");
     }
@@ -66,7 +66,7 @@ import org.springframework.stereotype.Component;
  @Override
  public void configure(AuthenticationManagerBuilder auth) throws Exception {
          auth.inMemoryAuthentication()
-             .withUser("user").password(bCryptPasswordEncoder().encode("password")).roles("USER");
+             .withUser("admin").password(bCryptPasswordEncoder().encode("password")).roles("USER");
      }
     @Override
     public boolean supports(Class<?> authentication) {
