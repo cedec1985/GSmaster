@@ -21,54 +21,42 @@ import org.springframework.stereotype.Component;
 @EnableMethodSecurity(securedEnabled = true)
 
 @Component
-    public class MyAuthenticationProvider extends WebSecurityConfigurerAdapter implements AuthenticationProvider{
+    public class SecurityConfigs extends WebSecurityConfigurerAdapter {
         
         @Override
-        @Bean
-        public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+        public SecurityConfig(CustomAuthenticationProvider customAuthenticationProvider) {
+        this.customAuthenticationProvider = customAuthenticationProvider;
     }
-        @Bean
-        public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
         @Autowired
-        private MyAuthenticationProvider myAuthenticationProvider;
+        private CustomAuthenticationProvider customAuthenticationProvider;
+
+        @Bean
+        public PasswordEncoder passwordEncoder() {
+            return new BCryptPasswordEncoder();
+        }
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
                 .authorizeRequests()
-                .antMatchers("/login").permitAll()
-                 .anyRequest().authenticated()
+                    .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()  // Permettre l'accès à Swagger
+                    .anyRequest().authenticated()  // Exiger une authentification pour toutes les autres URL
                 .and()
-            .formLogin()
-                .loginPage("/login")
-                .permitAll()
+                .formLogin()  // Utiliser un formulaire de login
+                    .permitAll()
                 .and()
-            .logout()
-                .permitAll()
-}
-    @Override
-    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getUsername();
-        String password = (String) authentication.getPassword();
-        
-        // Implement your authentication logic here
-        if ("admin".equals(username) && "password".equals(password)) {
-            return new UsernamePasswordAuthenticationToken(username, BCryptPasswordEncoder(password),client.getAuthorities());
+                .httpBasic();  // Optionnel : pour permettre l'authentification de base HTTP
         }
-        throw new BadCredentialsException("Invalid username or password");
-    }
-        
 
- @Override
- public void configure(AuthenticationManagerBuilder auth) throws Exception {
-         auth.MyAuthenticationProvider(myAuthenticationProvider)
-     }
-    @Override
-    public boolean supports(Class<?> authentication) {
-        return authentication.equals(UsernamePasswordAuthenticationToken.class);
+        @Override
+        @Bean
+        public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
+        @Override
+        protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    // Ajouter notre AuthenticationProvider personnalisé
+        auth.authenticationProvider(customAuthenticationProvider);
+}
+  
 }
