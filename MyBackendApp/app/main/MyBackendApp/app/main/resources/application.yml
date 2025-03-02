@@ -17,8 +17,4 @@ spring:
     allow-circular-references: true
 
 server:
-  port: 8085
-
-springdoc:
-  api-docs:
-    path=/api-docs:
+  port: 8080
