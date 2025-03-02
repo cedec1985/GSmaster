@@ -52,12 +52,12 @@ import org.springframework.stereotype.Component;
 }
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getEmail();
+        String username = authentication.getUsername();
         String password = (String) authentication.getPassword();
         
         // Implement your authentication logic here
         if ("admin".equals(username) && "password".equals(password)) {
-            return new UsernamePasswordAuthenticationToken(username, password,user.getAuthorities());
+            return new UsernamePasswordAuthenticationToken(username, password,client.getAuthorities());
         }
         throw new BadCredentialsException("Invalid username or password");
     }
