@@ -197,7 +197,7 @@
                 </goals>
                 <configuration>
                 <sources>
-                <source>MyBackendApp/app/main;MyBackendApp/app/main/config
+                <source>MyBackendApp/app/main
                 </source>
                 </sources>
                 </configuration>
