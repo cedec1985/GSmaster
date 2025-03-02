@@ -57,7 +57,7 @@ import org.springframework.stereotype.Component;
         
         // Implement your authentication logic here
         if ("admin".equals(username) && "password".equals(password)) {
-            return new UsernamePasswordAuthenticationToken(username, password,client.getAuthorities());
+            return new UsernamePasswordAuthenticationToken(username, BCryptPasswordEncoder(password),client.getAuthorities());
         }
         throw new BadCredentialsException("Invalid username or password");
     }
