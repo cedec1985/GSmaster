@@ -58,5 +58,4 @@ import org.springframework.stereotype.Component;
     // Ajouter notre AuthenticationProvider personnalisé
         auth.authenticationProvider(customAuthenticationProvider);
 }
-  
 }
