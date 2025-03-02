@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -58,7 +59,7 @@ public class ClientController {
         ClientDTO dto = ClientDTO.fromEntity(user);
         return ResponseEntity.ok(dto);
     }
-    //@PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/insert")
     public ResponseEntity<ClientDTO> create(@RequestBody @Valid ClientForm form){
         Client user = clientService.create( form.ToEntity());
