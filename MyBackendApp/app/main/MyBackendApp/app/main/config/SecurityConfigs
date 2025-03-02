@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
     public class SecurityConfigs extends WebSecurityConfigurerAdapter {
         
         @Override
-        public SecurityConfig(CustomAuthenticationProvider customAuthenticationProvider) {
+        public SecurityConfigs(CustomAuthenticationProvider customAuthenticationProvider) {
         this.customAuthenticationProvider = customAuthenticationProvider;
     }
         @Autowired
