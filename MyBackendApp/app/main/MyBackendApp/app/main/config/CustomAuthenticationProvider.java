@@ -23,7 +23,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         if ("user".equals(username) && passwordEncoder.matches(password, passwordEncoder.encode("password"))) {
             // Authentification réussie
             return new UsernamePasswordAuthenticationToken(
-                    username, password, Collections.singletonList(new SimpleGrantedAuthority("ROLE_CLIENT"))
+                    username, password, Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"))
             );
         } else {
             // Authentification échouée
