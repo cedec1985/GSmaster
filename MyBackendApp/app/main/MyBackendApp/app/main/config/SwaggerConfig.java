@@ -21,8 +21,8 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis((Predicate<RequestHandler>) RequestHandlerSelectors.basePackage("MybackendApp.app.main")) // Remplacez par le package de votre projet
-                .paths((Predicate<String>) PathSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("app.main")) // Remplacez par le package de votre projet
+                .paths(PathSelectors.any())
                 .build()
                 .apiInfo(new ApiInfoBuilder().title("API Documentation")
                         .description("Description de l'API")

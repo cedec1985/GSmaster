@@ -39,7 +39,7 @@ import org.springframework.stereotype.Component;
         protected void configure(HttpSecurity http) throws Exception {
             http
                 .authorizeRequests()
-                    .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()  // Permettre l'accès à Swagger
+                    .antMatchers("/swagger-ui/**", "/v3/api-docs/**","/login/**").permitAll()  // Permettre l'accès à Swagger
                     .anyRequest().authenticated()  // Exiger une authentification pour toutes les autres URL
                 .and()
                 .formLogin()  // Utiliser un formulaire de login
