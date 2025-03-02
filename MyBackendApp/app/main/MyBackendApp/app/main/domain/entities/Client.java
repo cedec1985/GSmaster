@@ -80,7 +80,7 @@ public class Client implements UserDetails {
 
     @Override
     public String getUsername() {
-        return mail ==null ? "" : "admin";
+        return mail ==null ? "" : "user";
     }
 
 }
