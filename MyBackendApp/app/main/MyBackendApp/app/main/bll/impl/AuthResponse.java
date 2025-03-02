@@ -4,12 +4,12 @@ import lombok.Data;
 
 @Data
 public class AuthResponse {
-        private String email;
+        private String mail;
         private String accessToken;
         private String password;
 
-        public AuthResponse(String email, String accessToken, String password) {
-            this.email = email;
+        public AuthResponse(String mail, String accessToken, String password) {
+            this.mail = mail;
             this.accessToken = accessToken;
             this.password = password;
         }
