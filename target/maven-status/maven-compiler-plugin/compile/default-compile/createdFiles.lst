@@ -1,7 +1,6 @@
 MyBackendApp\app\main\api\models\form\LivreurForm.class
 MyBackendApp\app\main\api\validation\constraints\Username.class
 MyBackendApp\app\main\controller\LivreurController.class
-MyBackendApp\app\main\utils\BCryptUtils.class
 MyBackendApp\app\main\utils\JwtTokenUtil.class
 MyBackendApp\app\main\api\models\form\CommandeForm.class
 MyBackendApp\app\main\domain\entities\Client.class
@@ -29,7 +28,6 @@ MyBackendApp\app\main\api\validation\validator\UsernameValidator.class
 MyBackendApp\app\main\bll\impl\ClientServiceImpl.class
 MyBackendApp\app\main\bll\impl\LivreurService.class
 MyBackendApp\app\main\bll\impl\AuthResponse.class
-MyBackendApp\app\main\config\SecurityConfig.class
 MyBackendApp\app\main\domain\entities\Produit.class
 MyBackendApp\app\main\exceptions\ClientNotFoundException.class
 MyBackendApp\app\main\domain\entities\Livreur.class
@@ -44,6 +42,7 @@ MyBackendApp\app\main\dal\CommandeRepository.class
 MyBackendApp\app\main\api\models\dtos\ProduitDTO.class
 MyBackendApp\app\main\Main.class
 MyBackendApp\app\main\bll\impl\ProduitServiceImpl.class
+MyBackendApp\app\main\config\CustomAuthenticationProvider.class
 MyBackendApp\app\main\api\validation\validator\PasswordValidator.class
 MyBackendApp\app\main\bll\impl\LivreurServiceImpl.class
 MyBackendApp\app\main\config\SwaggerConfig.class
