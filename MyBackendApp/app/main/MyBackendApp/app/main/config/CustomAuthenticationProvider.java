@@ -1,7 +1,6 @@
 package MyBackendApp.app.main.config;
 
 import java.util.Collections;
-
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -23,7 +22,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         if ("user".equals(username) && passwordEncoder.matches(password, passwordEncoder.encode("password"))) {
             // Authentification réussie
             return new UsernamePasswordAuthenticationToken(
-                    username, password, Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"))
+                    username, password, Collections.singletonList(new SimpleGrantedAuthority("USER"))
             );
         } else {
             // Authentification échouée
