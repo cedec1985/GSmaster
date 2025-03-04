@@ -2,14 +2,17 @@ package MyBackendApp.app.main.config;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
@@ -25,18 +28,20 @@ import org.springframework.stereotype.Component;
 @Component
     public class SecurityConfigs {
         
+        @Autowired
+        private CustomAuthenticationProvider authenticationProvider;
 
-        private CustomAuthenticationProvider customAuthenticationProvider;
-  
-        public SecurityConfigs(CustomAuthenticationProvider customAuthenticationProvider) {
-            this.customAuthenticationProvider = customAuthenticationProvider;
-    }
-        public SecurityConfigs() {}
+       @Bean
+        PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+        }
         @Bean
-        public DataSource dataSource() {
-            return new EmbeddedDatabaseBuilder()
-            .build();
-    }
+        AuthenticationProvider authenticationProvider(){
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setUserDetailsService(userDetailsService());
+        provider.setPasswordEncoder(passwordEncoder());
+        return provider;
+        }
         @Bean
         public UserDetailsManager users(DataSource dataSource) {
             UserDetails user = User.withDefaultPasswordEncoder()
@@ -47,28 +52,30 @@ import org.springframework.stereotype.Component;
         JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
         users.createUser(user);
         return users;
-    }
+        }
         @Bean
-        public InMemoryUserDetailsManager userDetailsService() {
+        public UserDetailsService userDetailsService() {
             UserDetails user = User.withDefaultPasswordEncoder()
             .username("user")
             .password("password")
             .roles("USER")
             .build();
         return new InMemoryUserDetailsManager(user);
-    }
-        @Bean
-        public PasswordEncoder passwordEncoder() {
-            return new BCryptPasswordEncoder();
-    }
-       
+        }
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-            .authorizeHttpRequests((authz) -> authz
-                .requestMatchers("/swagger-ui/**").authenticated()
-            )
-                .httpBasic();
-        return http.build();
-    }
+        return http.csrf().disable()
+                .authorizeHttpRequests()
+                .requestMatchers("/swagger-ui/**")
+                .permitAll()
+                .and()
+                .authorizeRequests()
+                .requestMatchers("/login")
+                .permitAll()
+                .and()
+                .httpBasic()
+                .and()
+                .authenticationProvider(authenticationProvider)
+                .build();   
+        }
 }
