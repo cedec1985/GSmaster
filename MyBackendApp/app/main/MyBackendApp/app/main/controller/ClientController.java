@@ -1,6 +1,6 @@
 package MyBackendApp.app.main.controller;
-import java.util.List;
 
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,7 +34,6 @@ import jakarta.validation.Valid;
 
 public class ClientController {
     private final ClientService clientService;
-
     final
     AuthenticationManager authManager;
     final
