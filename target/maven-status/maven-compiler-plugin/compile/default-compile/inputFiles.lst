@@ -19,11 +19,12 @@ c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\ap
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\ClientServiceImpl.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\CommandeService.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\CommandeServiceImpl.java
-c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\CustomUserDetailsService.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\LivreurService.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\LivreurServiceImpl.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\ProduitService.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\ProduitServiceImpl.java
+c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\UserDetailModel.java
+c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\bll\impl\UserDetailsServiceImpl.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\config\CustomAuthenticationProvider.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\config\OpenAPIConfig.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\config\SecurityConfigs.java
@@ -36,6 +37,7 @@ c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\ap
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\dal\CommandeRepository.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\dal\LivreurRepository.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\dal\ProduitRepository.java
+c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\dal\UserInfoRepository.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\domain\entities\Addresse.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\domain\entities\Categorie.java
 c:\Users\cedri\OneDrive\Documents\GSmaster\MyBackendApp\app\main\MyBackendApp\app\main\domain\entities\Client.java

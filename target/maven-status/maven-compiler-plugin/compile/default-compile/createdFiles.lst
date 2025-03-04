@@ -11,14 +11,15 @@ MyBackendApp\app\main\domain\entities\Commande.class
 MyBackendApp\app\main\dal\ClientRepository.class
 MyBackendApp\app\main\api\models\form\AddresseForm.class
 MyBackendApp\app\main\exceptions\ClientException.class
+MyBackendApp\app\main\dal\UserInfoRepository.class
 MyBackendApp\app\main\bll\impl\CommandeServiceImpl.class
+MyBackendApp\app\main\bll\impl\UserDetailModel.class
 MyBackendApp\app\main\api\models\dtos\LivreurDTO.class
 MyBackendApp\app\main\api\models\form\ClientForm.class
 MyBackendApp\app\main\dal\ProduitRepository.class
 MyBackendApp\app\main\domain\entities\Description.class
 MyBackendApp\app\main\controller\CommandeController.class
 MyBackendApp\app\main\bll\impl\ProduitService.class
-MyBackendApp\app\main\bll\impl\CustomUserDetailsService.class
 MyBackendApp\app\main\controller\ProduitController.class
 MyBackendApp\app\main\api\models\dtos\ClientDTO.class
 MyBackendApp\app\main\config\SecurityConfigs.class
@@ -38,6 +39,7 @@ MyBackendApp\app\main\api\validation\constraints\Password.class
 MyBackendApp\app\main\bll\impl\AuthRequest.class
 MyBackendApp\app\main\api\validation\constraints\Email.class
 MyBackendApp\app\main\api\models\dtos\CommandeDTO.class
+MyBackendApp\app\main\bll\impl\UserDetailsServiceImpl.class
 MyBackendApp\app\main\dal\CommandeRepository.class
 MyBackendApp\app\main\api\models\dtos\ProduitDTO.class
 MyBackendApp\app\main\Main.class
