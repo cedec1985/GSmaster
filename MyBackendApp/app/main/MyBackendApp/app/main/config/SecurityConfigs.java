@@ -1,6 +1,5 @@
 package MyBackendApp.app.main.config;
 
-import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +14,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
-import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.stereotype.Component;
 
@@ -42,17 +39,6 @@ import org.springframework.stereotype.Component;
         return provider;
         }
         @Bean
-        public UserDetailsManager users(DataSource dataSource) {
-            UserDetails user = User.withDefaultPasswordEncoder()
-            .username("user")
-            .password("password")
-            .roles("USER")
-            .build();
-        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-        users.createUser(user);
-        return users;
-        }
-        @Bean
         public UserDetailsService userDetailsService() {
             UserDetails user = User.withDefaultPasswordEncoder()
             .username("user")
@@ -69,7 +55,7 @@ import org.springframework.stereotype.Component;
                 .permitAll()
                 .and()
                 .authorizeRequests()
-                .requestMatchers("/login")
+                .requestMatchers("/login/**")
                 .permitAll()
                 .and()
                 .httpBasic()
@@ -77,4 +63,5 @@ import org.springframework.stereotype.Component;
                 .authenticationProvider(authenticationProvider)
                 .build();   
         }
+
 }
