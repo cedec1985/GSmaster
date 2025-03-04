@@ -59,7 +59,7 @@ public class Client implements UserDetails {
     private String password;
 
     @NotBlank
-    @Column(name = "mail", nullable = false, length = 50)
+    @Column(name = "mail", nullable = false)
     private String mail;
 
     @Column(name = "telephone", nullable = false)
@@ -75,12 +75,12 @@ public class Client implements UserDetails {
 
     @Override
     public String getPassword() {
-        return password==null ? "" : "password";
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return mail ==null ? "" : "user";
+        return mail;
     }
 
 }

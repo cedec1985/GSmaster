@@ -17,13 +17,20 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.stereotype.Component;
 
+import MyBackendApp.app.main.bll.impl.UserDetailsServiceImpl;
+import MyBackendApp.app.main.dal.UserInfoRepository;
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(securedEnabled = true)
 
 @Component
-    public class SecurityConfigs {
+    public class SecurityConfigs extends UserDetailsServiceImpl{
         
+        public SecurityConfigs(UserInfoRepository userinfoRepository) {
+        super(userinfoRepository);
+    
+    }
         @Autowired
         private CustomAuthenticationProvider authenticationProvider;
 
@@ -32,18 +39,11 @@ import org.springframework.stereotype.Component;
         return new BCryptPasswordEncoder();
         }
         @Bean
-        AuthenticationProvider authenticationProvider(){
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        provider.setUserDetailsService(userDetailsService());
-        provider.setPasswordEncoder(passwordEncoder());
-        return provider;
-        }
-        @Bean
-        public UserDetailsService userDetailsService() {
+        UserDetailsService userDetailsService() {
             UserDetails user = User.withDefaultPasswordEncoder()
             .username("user")
             .password("password")
-            .roles("USER")
+          //  .roles("USER")
             .build();
         return new InMemoryUserDetailsManager(user);
         }
