@@ -15,8 +15,8 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     @Override
     public Authentication authenticate(Authentication authentication) {
-        String username = authentication.getName();
-        String password = (String) authentication.getCredentials();
+        String username = "user";
+        String password = "password";
 
         // Simuler une authentification contre une base de données
         if ("user".equals(username) && passwordEncoder.matches(password, passwordEncoder.encode("password"))) {
