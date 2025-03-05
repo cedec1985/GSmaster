@@ -39,7 +39,7 @@ import MyBackendApp.app.main.dal.UserInfoRepository;
             UserDetails user = User.withDefaultPasswordEncoder()
             .username("user")
             .password("password")
-          //  .roles("USER")
+            .roles("USER")
             .build();
         return new InMemoryUserDetailsManager(user);
         }
@@ -51,7 +51,7 @@ import MyBackendApp.app.main.dal.UserInfoRepository;
                 .permitAll()
                 .and()
                 .authorizeRequests()
-                .requestMatchers("/login/**").authenticated()
+                .requestMatchers("/login/**").permitAll()
                 .and()
                 .httpBasic()
                 .and()
