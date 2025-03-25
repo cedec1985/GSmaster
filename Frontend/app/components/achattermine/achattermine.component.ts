@@ -23,7 +23,7 @@ export class AchattermineComponent implements OnInit{
   total:number = 0.00;
 
 
- mobNumberPattern = "^0[\d]{8}$";                                      // Numero de téléphone à 9 chiffres commençant par 
+ mobNumberPattern = "^0[\d]{8}$";                                      // Numero de téléphone à 9 chiffres commençant par 0
 
   constructor(private formBuilder: FormBuilder,private panier: PanierService, private router: Router, private readonly $livreur: LivreurService) { 
     this.cartItems = this.panier.getItemsFromCart();
