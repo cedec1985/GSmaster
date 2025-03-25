@@ -3,8 +3,6 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Router, RouterModule } from '@angular/router';
 import { PanierService } from '../../services/panier.service';
 import { CommonModule } from '@angular/common';
-import { Livreur } from '../../models/livreur';
-import { Observable } from 'rxjs';
 import { LivreurService } from '../../services/livreur.service';
 
 @Component({
