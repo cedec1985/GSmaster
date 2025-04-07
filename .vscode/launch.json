@@ -4,7 +4,6 @@
     // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "java",
             "name": "Main",
@@ -24,6 +23,16 @@
             "request": "launch",
             "mainClass": "Main",
             "projectName": "GSmaster"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Main<GSmaster_278681bb>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "MyBackendApp.app.main.Main",
+            "projectName": "GSmaster_278681bb",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
