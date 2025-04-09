@@ -7,6 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthService } from './services/auth-service.service';
 import { PanierService } from './services/panier.service';
+import SwaggerUI from 'swagger-ui';
 
 @Component({
     selector: 'app-root',
@@ -37,5 +38,5 @@ setInterval(() => {
     }, 200);
   
     }
-
+    
 }

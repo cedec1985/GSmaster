@@ -22,6 +22,9 @@
     "ngx-cookie-service": "^17.1.0",
     "primeng": "^17.18.15",
     "rxjs": "~7.8.0",
+    "swagger-ui": "^5.20.7",
+    "swagger-ui-dist": "^5.20.7",
+    "swagger-ui-react": "^5.20.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
@@ -45,7 +48,7 @@
     "typescript": "~5.4.2"
   },
   "npmScope": "myorg",
-    "affected": {
-      "defaultBase": "main"
-    }
+  "affected": {
+    "defaultBase": "main"
+  }
 }
