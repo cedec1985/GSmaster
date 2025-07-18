@@ -31,4 +31,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## General information
 
 The following steps are required to launch the application :
-Before launching the application it is needed to connect to the database, next run the Main class from the backend project (Spring Boot) and configure a docker image file (postgres:latest) with the appropriate command in order to run the container with Docker Desktop. The next step is mentionned above in the second section of this file (development server).
+Before launching the application it is needed to connect to the database, next run the Main class from the backend project (Spring Boot) and configure a docker image file (postgres:latest) with the appropriate command in order to run the container with Docker Desktop. The next step is mentionned above in the second section of this file (development server)

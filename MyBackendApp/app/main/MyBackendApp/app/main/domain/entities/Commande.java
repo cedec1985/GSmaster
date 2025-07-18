@@ -1,6 +1,4 @@
 package MyBackendApp.app.main.domain.entities;
-
-import java.beans.Transient;
 import java.time.LocalDate;
 
 import jakarta.persistence.*;

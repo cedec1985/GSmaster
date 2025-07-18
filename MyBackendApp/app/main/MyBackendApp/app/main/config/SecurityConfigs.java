@@ -36,27 +36,21 @@ import MyBackendApp.app.main.dal.UserInfoRepository;
         }
         @Bean
         UserDetailsService userDetailsService() {
-            UserDetails user = User.withDefaultPasswordEncoder()
-            .username("user")
-            .password("password")
-            .roles("USER")
-            .build();
-        return new InMemoryUserDetailsManager(user);
+            UserDetails user = User.builder()
+                .username("user")
+                .password(passwordEncoder().encode("password"))
+                .roles("USER")
+                .build();
+            return new InMemoryUserDetailsManager(user);
         }
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http.csrf().disable()
-                .authorizeHttpRequests()
-                .requestMatchers("/swagger-ui/**")
-                .permitAll()
-                .and()
-                .authorizeRequests()
-                .requestMatchers("/login/**").permitAll()
-                .and()
-                .httpBasic()
-                .and()
+        return http.csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/login/**", "/swagger-ui/**").permitAll()
+                    .anyRequest().authenticated()
+                )
                 .authenticationProvider(authenticationProvider)
                 .build();   
         }
-
-}
+    }
