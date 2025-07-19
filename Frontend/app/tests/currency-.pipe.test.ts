@@ -1,4 +1,5 @@
-import { CurrencyPipe } from './currency.pipe';
+// Update the import path below to the correct relative path where currency.pipe.ts is located
+import { CurrencyPipe } from '../pipes/currency/currency.pipe';
 
 describe('CurrencyPipe', () => {
     let pipe: CurrencyPipe;
