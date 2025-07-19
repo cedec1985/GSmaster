@@ -1,7 +1,6 @@
 package MyBackendApp.app.main.bll.impl;
 
 import MyBackendApp.app.main.dal.ClientRepository;
-import MyBackendApp.app.main.bll.impl.ClientService;
 import MyBackendApp.app.main.domain.entities.Client;
 import jakarta.annotation.Resource;
 import jakarta.transaction.Transactional;

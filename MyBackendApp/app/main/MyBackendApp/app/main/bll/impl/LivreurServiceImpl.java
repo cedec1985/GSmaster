@@ -1,6 +1,5 @@
 package MyBackendApp.app.main.bll.impl;
 import MyBackendApp.app.main.dal.LivreurRepository;
-import MyBackendApp.app.main.bll.impl.LivreurService;
 import MyBackendApp.app.main.domain.entities.Livreur;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,6 @@
 package MyBackendApp.app.main.bll.impl;
 
 import MyBackendApp.app.main.dal.ProduitRepository;
-import MyBackendApp.app.main.bll.impl.ProduitService;
 import MyBackendApp.app.main.domain.entities.Produit;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
