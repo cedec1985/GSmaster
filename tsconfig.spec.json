@@ -5,7 +5,8 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
-    ]
+    ],
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "Frontend/app/**/*.spec.ts",
