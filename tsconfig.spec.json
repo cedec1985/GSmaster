@@ -9,6 +9,7 @@
   },
   "include": [
     "Frontend/app/**/*.spec.ts",
-    "Frontend/app/**/*.d.ts"
+    "Frontend/app/**/*.d.ts",
+    "Frontend/app/**/*.ts"
   ]
 }
