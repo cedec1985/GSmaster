@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'Frontend/app/pipe/*.ts',
+      'Frontend/app/pipes/*.ts',
       'Frontend/app/tests/*.ts'
     ],
 
