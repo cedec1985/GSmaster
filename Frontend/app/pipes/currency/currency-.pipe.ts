@@ -6,18 +6,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CurrencyPipe implements PipeTransform {
 
-  frais!: number ;
-  total!: number ;
+  frais!: number;
+  total!: number;
   soustotal!: number;
 
   transform(
-    frais : any, 
-    total : any, 
-    soustotal : any,
-    currencyCode?: '€', 
+    frais: any,
+    total: any,
+    soustotal: any,
+    currencyCode?: '€',
     display?: 'code' | 'symbol' | 'symbol-narrow' | string | boolean): string {
-        return this.transform({frais,total,soustotal}, currencyCode, display);
-    }
+    return this.transform({ frais, total, soustotal }, currencyCode, display);
+  }
 }
 
 
