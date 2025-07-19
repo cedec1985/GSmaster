@@ -16,8 +16,15 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'Frontend/app/pipes/currency/*.ts',
-      'Frontend/app/tests/*.ts'
+      'Frontend/app/tests/*.ts',
+      'Frontend/app/**/*.ts',
     ],
+     files: [
+    {
+      pattern: 'Frontend/app/**/*.ts',
+      type: 'js'
+    },
+  ],
 
     // list of files / patterns to exclude
     exclude: [
@@ -55,7 +62,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
-    browsers: ['Edge'],
+    browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
