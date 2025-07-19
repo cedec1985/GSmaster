@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "nrwl.angular-console",
-    "angular.ng-template"
+    "angular.ng-template",
+    "madhusuthanan.angular-unit-testing-snippets"
   ]
 }
