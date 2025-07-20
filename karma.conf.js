@@ -16,35 +16,27 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       {
-      pattern: 'app/tests/**/*.test.ts',
+      pattern: 'app/**/*.test.ts',
       type: 'js',
     },
-      
-      'app/**/*.ts',
-      'app/tests/**/*.test.ts'
+      'app/**/*.test.ts'
 ],
 
     // list of files / patterns to exclude
-    exclude: [
-    ],
-
-
+    exclude: ['node_modules'],
+   
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
       '**/*.ts': ['karma-typescript']
     },
-
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
     reporters: ['progress','karma-typescript'],
 
-
     // web server port
     port: 9876,
-
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
@@ -61,7 +53,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
-    browsers: ['ChromeHeadless'],
+    browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
