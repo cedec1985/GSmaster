@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "Frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -44,12 +44,12 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "karma-jasmine-matchers": "^4.0.2",
     "karma-spec-reporter": "^0.0.36",
     "nx": "^13.10.6",
-    "typescript": "~5.4.2",
-    "karma-jasmine-matchers": "^4.0.2",
     "puppeteer": "^1.20.0",
-    "ts-node": "^8.10.2"
+    "ts-node": "^8.10.2",
+    "typescript": "~5.4.2"
   },
   "npmScope": "myorg",
   "affected": {
