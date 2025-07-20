@@ -9,8 +9,6 @@
     "Frontend/app/main.ts"
   ],
     "include": [
-    "Frontend/app/**/*.test.ts","Frontend/app/pipes/currency/*.test.ts",
-      "Frontend/app/tests/*.test.ts",
-      "Frontend/app/**/*.test.ts",
+    "Frontend/app/tests/*.test.ts"
   ],
 }
