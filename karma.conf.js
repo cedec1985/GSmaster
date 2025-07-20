@@ -10,17 +10,19 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine','karma-typescript'],
 
 
     // list of files / patterns to load in the browser
     files: [
       {
-      pattern: 'Frontend/app/tests/*.test.ts',
+      pattern: 'app/tests/**/*.test.ts',
       type: 'js',
     },
-      'Frontend/app/tests/*.test.ts'
-    ],
+      
+      'app/**/*.ts',
+      'app/tests/**/*.test.ts'
+],
 
     // list of files / patterns to exclude
     exclude: [
@@ -30,13 +32,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
+      '**/*.ts': ['karma-typescript']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress','karma-typescript'],
 
 
     // web server port
@@ -49,7 +52,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -58,7 +61,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

@@ -7,8 +7,5 @@
   },
   "files": [
     "Frontend/app/main.ts"
-  ],
-    "include": [
-    "Frontend/app/tests/*.test.ts"
-  ],
+  ]
 }

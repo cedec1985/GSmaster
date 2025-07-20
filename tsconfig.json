@@ -23,15 +23,13 @@
       "ES2022",
       "dom"
     ]
-  
+
   },
-   "include": [
-      "Frontend/app/tests/*.test.ts"
-  ],
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
-  },
+    "strictTemplates": true
+  }
 }
