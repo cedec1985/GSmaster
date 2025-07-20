@@ -19,9 +19,9 @@ module.exports = function(config) {
       pattern: 'Frontend/app/**/*.ts',
       type: 'js',
     },
-      'Frontend/app/pipes/currency/*.ts',
-      'Frontend/app/tests/*.ts',
-      'Frontend/app/**/*.ts',
+      'Frontend/app/pipes/currency/*.test.ts',
+      'Frontend/app/tests/*.test.ts',
+      'Frontend/app/**/*.test.ts',
     ],
 
     // list of files / patterns to exclude

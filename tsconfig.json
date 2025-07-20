@@ -26,9 +26,9 @@
   
   },
    "include": [
-    "Frontend/app/**/*.ts","Frontend/app/pipes/currency/*.ts",
-      "Frontend/app/tests/*.ts",
-      "Frontend/app/**/*.ts",
+    "Frontend/app/**/*.test.ts","Frontend/app/pipes/currency/*.test.ts",
+      "Frontend/app/tests/*.test.ts",
+      "Frontend/app/**/*.test.ts",
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
