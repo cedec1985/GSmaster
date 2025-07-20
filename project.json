@@ -73,7 +73,7 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "tsconfig.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
               "Frontend/app/assets"
