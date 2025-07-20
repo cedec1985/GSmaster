@@ -16,10 +16,10 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       {
-      pattern: 'app/tests/*.test.ts',
+      pattern: 'Frontend/app/tests/*.test.ts',
       type: 'js',
     },
-      'app/tests/*.test.ts'
+      'frontend/app/tests/*.test.ts'
 ],
 
     // list of files / patterns to exclude
